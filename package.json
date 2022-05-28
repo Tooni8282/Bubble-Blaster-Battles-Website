@@ -1,0 +1,25 @@
+{
+    "name": "bubble-blaster-battles-website",
+    "version": "1.0.0",
+    "description": "The home of the Bubble Blaster Battles Website build-grounds.",
+    "main": "index.js",
+    "directories": {},
+    "scripts": {
+        "build-styles-css": "npx tailwindcss -i ./docs/css/styles-source.css -o ./docs/css/styles.css --watch"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/Tooni8282/Bubble-Blaster-Battles-Website.git"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/Tooni8282/Bubble-Blaster-Battles-Website/issues"
+    },
+    "homepage": "https://github.com/Tooni8282/Bubble-Blaster-Battles-Website#readme",
+    "dependencies": {
+        "tailwindcss": "^3.0.24"
+    }
+}
+
