@@ -4,26 +4,25 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-        <title>Tailwind CSS Skeleton</title>
-        <meta name="description" content="" />
-        <meta name="keywords" content="" />
-        <meta name="author" content="" />
+        <title>Bubble Blaster Battles</title>
+        <meta
+            name="description"
+            content="The official website for Bubble Blaster Battles, a game where you dive into the endless Ocean and build your own bubble tank to fight hundreds of enemies and explore expansive biomes!"
+        />
+        <meta
+            name="keywords"
+            content="bubble, blaster, battles, bubble blaster, blaster battles, bubble blaster battles, bubble battles, ocean, explore, exploration, game, bubble game, bubble tanks, bubble tanks game, ocean game, ocean bubble game"
+        />
+        <meta name="author" content="Tooni" />
 
-        <!-- Font Awesome if you need it
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.10.2/css/all.css">
-  -->
+        <!-- Stylesheet Formatter -->
         <link
             rel="stylesheet"
             href="https://unpkg.com/tailwindcss@2.2.19/dist/tailwind.min.css"
         />
-        <!--Replace with your tailwind.css once created-->
-        <link
-            href="https://unpkg.com/@tailwindcss/custom-forms/dist/custom-forms.min.css"
-            rel="stylesheet"
-        />
-        <!--Tailwind Custom Forms - use to standardise form fields - https://github.com/tailwindcss/custom-forms-->
 
         <style>
+            /* Import Jua Font */
             @import url("https://fonts.googleapis.com/css2?family=Jua&display=swap");
             html {
                 font-family: "Jua", sans-serif;
@@ -47,11 +46,6 @@
                 );
             }
 
-            /* Browser mockup code
- * Contribute: https://gist.github.com/jarthod/8719db9fef8deb937f4f
- * Live example: https://updown.io
- */
-
             .browser-mockup {
                 border-top: 2em solid rgba(230, 230, 230, 0.7);
                 position: relative;
@@ -74,8 +68,6 @@
             .browser-mockup > * {
                 display: block;
             }
-
-            /* Custom code for the demo */
         </style>
     </head>
 
@@ -1205,9 +1197,7 @@
         </footer>
 
         <script>
-            /*Toggle dropdown list*/
-            /*https://gist.github.com/slavapas/593e8e50cf4cc16ac972afcbad4f70c8*/
-
+            /* Toggle dropdown list */
             var navMenuDiv = document.getElementById("nav-content");
             var navMenu = document.getElementById("nav-toggle");
 
@@ -1215,18 +1205,17 @@
             function check(e) {
                 var target = (e && e.target) || (event && event.srcElement);
 
-                //Nav Menu
                 if (!checkParent(target, navMenuDiv)) {
-                    // click NOT on the menu
+                    //we have NOT clicked on the menu content
                     if (checkParent(target, navMenu)) {
-                        // click on the link
+                        //we have clicked on the menu toggle - toggle menu
                         if (navMenuDiv.classList.contains("hidden")) {
                             navMenuDiv.classList.remove("hidden");
                         } else {
                             navMenuDiv.classList.add("hidden");
                         }
                     } else {
-                        // click both outside link and outside menu, hide menu
+                        //we have clicked outside the menu and not on a link - hide menu
                         navMenuDiv.classList.add("hidden");
                     }
                 }
