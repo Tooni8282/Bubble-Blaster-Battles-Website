@@ -73,13 +73,13 @@
 
     <body class="gradient leading-relaxed tracking-wide flex flex-col">
         <!-- Nav -->
-        <nav id="header" class="w-full z-30 top-0 text-white py-1 md:py-6">
+        <nav id="header" class="w-full z-30 top-0 text-white">
             <div
-                class="w-full container mx-auto flex flex-wrap items-center justify-between mt-0 px-2 py-2 md:py-6"
+                class="w-full container mx-auto flex flex-wrap items-center justify-between mt-0 px-2"
             >
                 <div class="pl-4 flex items-center">
                     <a href="#">
-                        <img class="h-16 w-16" src="./images/BBBLogo.svg" />
+                        <img class="w-12 h-12" src="./images/BBBLogo.svg" />
                     </a>
                 </div>
 
@@ -89,7 +89,7 @@
                         class="flex items-center px-3 py-2 border rounded text-gray-500 border-gray-600 hover:text-gray-800 hover:border-green-500 appearance-none focus:outline-none"
                     >
                         <svg
-                            class="fill-current h-3 w-3"
+                            class="fill-current w-3 h-3"
                             viewBox="0 0 20 20"
                             xmlns="http://www.w3.org/2000/svg"
                         >
@@ -139,7 +139,22 @@
         </nav>
 
         <!-- Game Trailer -->
-        <div class="container mx-auto h-screen">
+        <div class="container max-w-none h-auto">
+            <div class="flex items-center justify-center">
+                <div class="aspect-w-16 aspect-h-9 object-cover">
+                    <video autoplay muted loop>
+                        <source
+                            class="video-js"
+                            src="Bubble Blaster Battles Trailer (unfinished).mp4"
+                            type="video/mp4"
+                            alt="Bubble Blaster Battles Trailer"
+                            title="Bubble Blaster Battles Trailer"
+                            poster="./images/BBBLogo.svg"
+                            data-setup="{}"
+                        />
+                    </video>
+                </div>
+            </div>
             <div class="text-center px-3 lg:px-0">
                 <h1
                     class="mt-4 text-2xl md:text-3xl lg:text-5xl font-black leading-tight"
@@ -153,23 +168,6 @@
                     to fight hundreds of enemies and explore expansive biomes!
                 </p>
             </div>
-
-            <!-- <div class="flex items-center justify-center"> -->
-            <!-- <div class="flex flex-1 items-center w-full mx-auto"> -->
-            <div
-                class="flex items-center justify-center border-gray-600 border-2"
-            >
-                <div class="aspect-w-16 aspect-h-9">
-                    <video autoplay muted loop>
-                        <source
-                            src="Bubble Blaster Battles Trailer (unfinished).mp4"
-                            type="video/mp4"
-                        />
-                    </video>
-                </div>
-            </div>
-            <!-- </div> -->
-            <!-- </div> -->
         </div>
 
         <!-- Game -->
@@ -193,7 +191,7 @@
                 >
                     <span class="w-1/2 p-4 md:w-auto flex items-center"
                         ><svg
-                            class="h-10 w-10 mr-4 fill-current text-gray-500 opacity-75"
+                            class="w-10 h-10 mr-4 fill-current text-gray-500 opacity-75"
                             xmlns="http://www.w3.org/2000/svg"
                             viewBox="0 0 20 20"
                         >
@@ -206,7 +204,7 @@
 
                     <span class="w-1/2 p-4 md:w-auto flex items-center"
                         ><svg
-                            class="h-10 w-10 mr-4 fill-current text-gray-500 opacity-75"
+                            class="w-10 h-10 mr-4 fill-current text-gray-500 opacity-75"
                             xmlns="http://www.w3.org/2000/svg"
                             viewBox="0 0 20 20"
                         >
@@ -219,7 +217,7 @@
 
                     <span class="w-1/2 p-4 md:w-auto flex items-center"
                         ><svg
-                            class="h-10 w-10 mr-4 fill-current text-gray-500 opacity-75"
+                            class="w-10 h-10 mr-4 fill-current text-gray-500 opacity-75"
                             xmlns="http://www.w3.org/2000/svg"
                             viewBox="0 0 20 20"
                         >
@@ -232,7 +230,7 @@
 
                     <span class="w-1/2 p-4 md:w-auto flex items-center"
                         ><svg
-                            class="h-10 w-10 mr-4 fill-current text-gray-500 opacity-75"
+                            class="w-10 h-10 mr-4 fill-current text-gray-500 opacity-75"
                             xmlns="http://www.w3.org/2000/svg"
                             viewBox="0 0 20 20"
                         >
@@ -1059,7 +1057,7 @@
                             href="#"
                         >
                             <svg
-                                class="h-6 w-6 inline-block"
+                                class="w-6 h-6 inline-block"
                                 xmlns="http://www.w3.org/2000/svg"
                                 viewBox="0 0 20 20"
                             >
