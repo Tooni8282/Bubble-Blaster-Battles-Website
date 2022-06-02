@@ -3,5 +3,7 @@ module.exports = {
     theme: {
         extend: {},
     },
-    plugins: [require("@tailwindcss/aspect-ratio")],
+    plugins: [
+        require("@tailwindcss/aspect-ratio", "@videojs/http-streaming", "@videojs/vhs-utils", "@videojs/xhr"),
+    ],
 };
