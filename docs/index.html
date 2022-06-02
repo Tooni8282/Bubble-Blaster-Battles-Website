@@ -158,6 +158,7 @@
                         autoplay
                         muted
                         loop
+                        playsinline
                     >
                         <source
                             src="./videos/BBBTrailer.mp4"
@@ -1201,6 +1202,11 @@
         </footer>
 
         <script>
+            //scroll to the top of the webpage upon refreshing
+            window.onbeforeunload = function () {
+                window.scrollTo(0, 0);
+            };
+
             /* Toggle dropdown list */
             var navMenuDiv = document.getElementById("nav-content");
             var navMenu = document.getElementById("nav-toggle");
