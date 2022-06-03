@@ -1,1 +1,1 @@
-declare module "@tailwindcss/aspect-ratio";
+declare module "tw-elements/dist/plugin";

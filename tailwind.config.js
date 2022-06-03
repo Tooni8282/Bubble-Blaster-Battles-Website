@@ -1,9 +1,10 @@
 module.exports = {
-    content: ["./docs/*.{html,js}"],
+    content: [
+        "./docs/*.{html,js}",
+        "./node_modules/tw-elements/dist/js/**/*.js",
+    ],
     theme: {
         extend: {},
     },
-    plugins: [
-        require("@tailwindcss/aspect-ratio", "@videojs/http-streaming", "@videojs/vhs-utils", "@videojs/xhr"),
-    ],
+    plugins: [require("tw-elements/dist/plugin")],
 };
