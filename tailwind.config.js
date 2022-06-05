@@ -1,4 +1,4 @@
-const defaultTheme = require("tailwindcss/defaultTheme");
+const { screens } = require("tailwindcss/defaultTheme");
 
 module.exports = {
     content: [
@@ -7,8 +7,9 @@ module.exports = {
     ],
     theme: {
         screens: {
+            bs: "0px",
             xs: "475px",
-            ...defaultTheme.screens,
+            ...screens,
         },
     },
     plugins: [require("tw-elements/dist/plugin")],
