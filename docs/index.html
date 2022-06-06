@@ -78,7 +78,7 @@
         </style>
     </head>
 
-    <body class="gradient leading-relaxed tracking-wide flex flex-col">
+    <body class="leading-relaxed tracking-wide flex flex-col">
         <!-- Nav -->
         <nav id="header" class="w-full z-30 top-0 py-2 text-white">
             <div
@@ -177,7 +177,7 @@
                 style="
                     background-image: url('./images/UnderwaterBackground.jpeg');
                 "
-                class="bg-no-repeat bg-cover my-[-2px] text-center bs:px-3 xs:px-5 sm:px-7 md:px-9 py-12"
+                class="bg-no-repeat bg-cover -my-2 text-center bs:px-3 xs:px-5 sm:px-7 md:px-9 py-12"
             >
                 <h1
                     class="bs:text-xl xs:text-3xl sm:text-4xl md:text-5xl lg:text-6xl xs:mt-4 sm:mt-8 md:mt-14 lg:mt-20 bs:mb-0.5 xs:mb-1 sm:mb-2 md:mb-3 lg:mb-4 font-black text-transparent bg-clip-text bg-gradient-to-bl from-red-600 to-yellow-400 tracking-widest leading-tight"
@@ -212,6 +212,7 @@
                 class="carousel slide relative"
                 data-bs-ride="carousel"
                 data-bs-interval="4500"
+                data-bs-pause="false"
             >
                 <div
                     class="carousel-indicators absolute right-0 bottom-0 left-0 flex justify-center p-0 mb-4"
@@ -336,9 +337,14 @@
                     <span class="visually-hidden">Next</span>
                 </button>
             </div>
+
+            <!-- Download -->
+            <div class="h-6 -mt-2 bg-black"></div>
+            <div class="h-40 -mt-2 bg-gradient-to-b from-black to-blue-900">
+                <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+            </div>
         </div>
 
-        <!-- Download -->
         <section class="overflow-hidden bg-white border-b py-12">
             <div
                 class="container mx-auto flex flex-wrap items-center justify-between pb-12"
