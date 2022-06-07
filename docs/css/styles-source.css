@@ -2,6 +2,8 @@
 @tailwind components;
 @tailwind utilities;
 
-.button {
-    @apply mx-auto text-center font-extrabold cursor-pointer hover:underline rounded-lg bg-gradient-to-bl from-orange-500 to-yellow-400 shadow opacity-75;
+@layer components {
+    .button {
+        @apply mx-auto text-center font-extrabold cursor-pointer hover:underline rounded-lg bg-gradient-to-bl from-orange-500 to-yellow-400 shadow opacity-75;
+    }
 }
