@@ -478,6 +478,12 @@ Ensure the default browser behavior of the `hidden` attribute.
   }
 }
 
+@media (min-width: 360px) {
+  .container {
+    max-width: 360px;
+  }
+}
+
 @media (min-width: 475px) {
   .container {
     max-width: 475px;
@@ -4689,6 +4695,12 @@ textarea.form-control.is-invalid {
   .bs\:text-2xl {
     font-size: 1.5rem;
     line-height: 2rem;
+  }
+}
+
+@media (min-width: 360px) {
+  .xxs\:-mb-20 {
+    margin-bottom: -5rem;
   }
 }
 
