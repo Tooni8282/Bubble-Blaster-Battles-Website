@@ -3869,10 +3869,6 @@ textarea.form-control.is-invalid {
   --tw-gradient-to: #facc15;
   text-align: center;
   font-weight: 800;
-  opacity: 0.75;
-  --tw-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
-  --tw-shadow-colored: 0 1px 3px 0 var(--tw-shadow-color), 0 1px 2px -1px var(--tw-shadow-color);
-  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 }
 
 .button:hover {
@@ -3951,6 +3947,11 @@ textarea.form-control.is-invalid {
   margin-bottom: -0.5rem;
 }
 
+.my-12 {
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+}
+
 .my-2 {
   margin-top: 0.5rem;
   margin-bottom: 0.5rem;
@@ -3964,11 +3965,6 @@ textarea.form-control.is-invalid {
 .my-6 {
   margin-top: 1.5rem;
   margin-bottom: 1.5rem;
-}
-
-.my-12 {
-  margin-top: 3rem;
-  margin-bottom: 3rem;
 }
 
 .my-4 {
@@ -3986,6 +3982,10 @@ textarea.form-control.is-invalid {
 
 .mb-4 {
   margin-bottom: 1rem;
+}
+
+.mt-4 {
+  margin-top: 1rem;
 }
 
 .mr-4 {
@@ -4010,10 +4010,6 @@ textarea.form-control.is-invalid {
 
 .mt-auto {
   margin-top: auto;
-}
-
-.mt-4 {
-  margin-top: 1rem;
 }
 
 .mt-8 {
@@ -4130,6 +4126,10 @@ textarea.form-control.is-invalid {
 
 .max-w-none {
   max-width: none;
+}
+
+.max-w-xl {
+  max-width: 36rem;
 }
 
 .max-w-fit {
@@ -4300,13 +4300,26 @@ textarea.form-control.is-invalid {
   background-image: linear-gradient(to bottom left, var(--tw-gradient-stops));
 }
 
+.bg-gradient-to-b {
+  background-image: linear-gradient(to bottom, var(--tw-gradient-stops));
+}
+
 .from-red-600 {
   --tw-gradient-from: #dc2626;
   --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to, rgb(220 38 38 / 0));
 }
 
+.from-yellow-400 {
+  --tw-gradient-from: #facc15;
+  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to, rgb(250 204 21 / 0));
+}
+
 .to-yellow-400 {
   --tw-gradient-to: #facc15;
+}
+
+.to-orange-500 {
+  --tw-gradient-to: #f97316;
 }
 
 .bg-cover {
@@ -4412,6 +4425,10 @@ textarea.form-control.is-invalid {
 
 .pr-4 {
   padding-right: 1rem;
+}
+
+.pr-3 {
+  padding-right: 0.75rem;
 }
 
 .pb-12 {
