@@ -3869,6 +3869,10 @@ textarea.form-control.is-invalid {
   --tw-gradient-to: #facc15;
   text-align: center;
   font-weight: 800;
+  --tw-shadow-color: #000;
+  --tw-shadow: var(--tw-shadow-colored);
+  --tw-drop-shadow: drop-shadow(0 10px 8px rgb(0 0 0 / 0.04)) drop-shadow(0 4px 3px rgb(0 0 0 / 0.1));
+  filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
 }
 
 .button:hover {
@@ -4144,9 +4148,9 @@ textarea.form-control.is-invalid {
   border-color: rgb(75 85 99 / var(--tw-border-opacity));
 }
 
-.bg-black {
+.bg-sky-600 {
   --tw-bg-opacity: 1;
-  background-color: rgb(0 0 0 / var(--tw-bg-opacity));
+  background-color: rgb(2 132 199 / var(--tw-bg-opacity));
 }
 
 .bg-white {
@@ -4157,15 +4161,6 @@ textarea.form-control.is-invalid {
 .bg-blue-900 {
   --tw-bg-opacity: 1;
   background-color: rgb(30 58 138 / var(--tw-bg-opacity));
-}
-
-.bg-transparent {
-  background-color: transparent;
-}
-
-.bg-sky-600 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(2 132 199 / var(--tw-bg-opacity));
 }
 
 .bg-gradient-to-bl {
@@ -4181,17 +4176,17 @@ textarea.form-control.is-invalid {
   --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to, rgb(220 38 38 / 0));
 }
 
-.from-yellow-400 {
-  --tw-gradient-from: #facc15;
-  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to, rgb(250 204 21 / 0));
+.from-teal-100 {
+  --tw-gradient-from: #ccfbf1;
+  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to, rgb(204 251 241 / 0));
 }
 
 .to-yellow-400 {
   --tw-gradient-to: #facc15;
 }
 
-.to-orange-500 {
-  --tw-gradient-to: #f97316;
+.to-teal-300 {
+  --tw-gradient-to: #5eead4;
 }
 
 .bg-cover {
@@ -4213,10 +4208,6 @@ textarea.form-control.is-invalid {
 
 .p-0 {
   padding: 0px;
-}
-
-.p-1 {
-  padding: 0.25rem;
 }
 
 .py-2 {
@@ -4249,6 +4240,11 @@ textarea.form-control.is-invalid {
   padding-bottom: 3rem;
 }
 
+.py-3 {
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+}
+
 .px-10 {
   padding-left: 2.5rem;
   padding-right: 2.5rem;
@@ -4262,8 +4258,8 @@ textarea.form-control.is-invalid {
   padding-right: 1rem;
 }
 
-.pr-3 {
-  padding-right: 0.75rem;
+.pr-5 {
+  padding-right: 1.25rem;
 }
 
 .pr-1 {
@@ -4361,12 +4357,22 @@ textarea.form-control.is-invalid {
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 }
 
+.shadow-black {
+  --tw-shadow-color: #000;
+  --tw-shadow: var(--tw-shadow-colored);
+}
+
 .outline {
   outline-style: solid;
 }
 
 .blur {
   --tw-blur: blur(8px);
+  filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
+}
+
+.drop-shadow-lg {
+  --tw-drop-shadow: drop-shadow(0 10px 8px rgb(0 0 0 / 0.04)) drop-shadow(0 4px 3px rgb(0 0 0 / 0.1));
   filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
 }
 
@@ -4443,6 +4449,12 @@ textarea.form-control.is-invalid {
     display: block;
   }
 
+  .bs\:max-w-fit {
+    max-width: -webkit-fit-content;
+    max-width: -moz-fit-content;
+    max-width: fit-content;
+  }
+
   .bs\:px-3 {
     padding-left: 0.75rem;
     padding-right: 0.75rem;
@@ -4451,6 +4463,22 @@ textarea.form-control.is-invalid {
   .bs\:px-2 {
     padding-left: 0.5rem;
     padding-right: 0.5rem;
+  }
+
+  .bs\:pl-5 {
+    padding-left: 1.25rem;
+  }
+
+  .bs\:pl-3 {
+    padding-left: 0.75rem;
+  }
+
+  .bs\:pl-1 {
+    padding-left: 0.25rem;
+  }
+
+  .bs\:pr-4 {
+    padding-right: 1rem;
   }
 
   .bs\:text-center {
@@ -4509,6 +4537,10 @@ textarea.form-control.is-invalid {
     margin-bottom: 0.5rem;
   }
 
+  .xs\:max-w-none {
+    max-width: none;
+  }
+
   .xs\:px-5 {
     padding-left: 1.25rem;
     padding-right: 1.25rem;
@@ -4517,6 +4549,30 @@ textarea.form-control.is-invalid {
   .xs\:px-10 {
     padding-left: 2.5rem;
     padding-right: 2.5rem;
+  }
+
+  .xs\:pl-2 {
+    padding-left: 0.5rem;
+  }
+
+  .xs\:pl-1 {
+    padding-left: 0.25rem;
+  }
+
+  .xs\:pl-4 {
+    padding-left: 1rem;
+  }
+
+  .xs\:pl-3 {
+    padding-left: 0.75rem;
+  }
+
+  .xs\:pr-6 {
+    padding-right: 1.5rem;
+  }
+
+  .xs\:pl-2\.5 {
+    padding-left: 0.625rem;
   }
 
   .xs\:text-3xl {
