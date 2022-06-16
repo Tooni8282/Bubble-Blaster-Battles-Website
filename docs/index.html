@@ -42,7 +42,7 @@
 
     <body class="bg-blue-600 flex flex-col">
         <!-- Nav -->
-        <nav id="header" class="w-full bg-blue-800 z-30 top-0">
+        <nav id="header" class="w-full bg-blue-800 top-0 z-30">
             <div
                 class="w-full mx-auto my-3 flex flex-wrap items-center justify-between px-2"
             >
@@ -72,50 +72,52 @@
                 </div>
 
                 <div
-                    class="w-full flex-grow md:flex md:w-auto bs:hidden md:block bs:my-2 md:my-0 z-20"
+                    class="w-full flex-grow md:flex md:w-auto bs:hidden md:block bs:my-2 md:my-0 text-lg"
                     id="nav-content"
                 >
-                    <ul class="justify-end list-reset flex-1 md:flex">
+                    <ul
+                        class="list-reset flex-1 md:flex justify-end items-center"
+                    >
                         <li
-                            class="w-fit bs:mx-auto md:mx-0 bs:my-2 md:my-0 md:mr-3"
+                            class="w-max bs:mx-auto md:mx-0 bs:my-2 md:my-0 md:mr-3"
                         >
                             <button
                                 data-mdb-ripple="true"
                                 data-mdb-ripple-color="dark"
-                                class="button bs:py-1 md:py-2 px-4"
+                                class="button bs:py-1 md:py-1.5 px-4"
                             >
                                 Game
                             </button>
                         </li>
                         <li
-                            class="w-fit bs:mx-auto md:mx-0 bs:my-2 md:my-0 md:mr-3"
+                            class="w-max bs:mx-auto md:mx-0 bs:my-2 md:my-0 md:mr-3"
                         >
                             <button
                                 data-mdb-ripple="true"
                                 data-mdb-ripple-color="dark"
-                                class="button bs:py-1 md:py-2 px-4"
+                                class="button bs:py-1 md:py-1.5 px-4"
                             >
                                 Download
                             </button>
                         </li>
                         <li
-                            class="w-fit bs:mx-auto md:mx-0 bs:my-2 md:my-0 md:mr-3"
+                            class="w-max bs:mx-auto md:mx-0 bs:my-2 md:my-0 md:mr-3"
                         >
                             <button
                                 data-mdb-ripple="true"
                                 data-mdb-ripple-color="dark"
-                                class="button bs:py-1 md:py-2 px-4"
+                                class="button bs:py-1 md:py-1.5 px-4"
                             >
                                 Community
                             </button>
                         </li>
                         <li
-                            class="w-fit bs:mx-auto md:mx-0 bs:my-2 md:my-0 md:mr-3"
+                            class="w-max bs:mx-auto md:mx-0 bs:my-2 md:my-0 md:mr-3"
                         >
                             <button
                                 data-mdb-ripple="true"
                                 data-mdb-ripple-color="dark"
-                                class="button bs:py-1 md:py-2 px-4"
+                                class="button bs:py-1 md:py-1.5 px-4"
                             >
                                 Support Project
                             </button>
@@ -148,12 +150,12 @@
                 class="bg-no-repeat bg-cover -my-2 text-center bs:px-3 xs:px-5 sm:px-7 md:px-9 lg:px-11 py-12"
             >
                 <h1
-                    class="bs:text-xl xs:text-3xl sm:text-4xl md:text-5xl lg:text-6xl xs:mt-4 sm:mt-8 md:mt-14 lg:mt-20 bs:mb-0.5 xs:mb-1 sm:mb-2 md:mb-3 lg:mb-4 font-black text-transparent bg-clip-text bg-gradient-to-b from-yellow-400 to-orange-500 tracking-widest tracking-wide drop-shadow-lg flex-inline"
+                    class="bs:text-xl xxs:text-2xl xs:text-3xl sm:text-4xl md:text-5xl lg:text-6xl xs:mt-4 sm:mt-8 md:mt-14 lg:mt-20 bs:mb-0.5 xs:mb-1 sm:mb-2 md:mb-3 lg:mb-4 font-black text-transparent bg-clip-text bg-gradient-to-b from-yellow-400 to-orange-500 tracking-widest tracking-wide drop-shadow-lg flex-inline"
                 >
                     Bubble Blaster Battles
                 </h1>
                 <p
-                    class="bs:text-base xs:text-xl md:text-2xl lg:text-3xl text-gray-200 tracking-wide drop-shadow-lg inline-block"
+                    class="bs:text-base xxs:text-lg xs:text-xl md:text-2xl lg:text-3xl text-gray-200 tracking-wide drop-shadow-lg inline-block"
                 >
                     Dive into the endless Ocean and build your own bubble tank
                     to fight hundreds of enemies and explore expansive biomes!
@@ -164,11 +166,11 @@
                     <img
                         src="./images/BubbleTankBattle.png"
                         id="bubble-tank-battle"
-                        class="mx-auto relative drop-shadow-lg shadow-black"
+                        class="mx-auto relative drop-shadow-lg shadow-black z-10"
                     />
                 </div>
                 <p
-                    class="bs:text-base xs:text-xl md:text-2xl lg:text-3xl text-gray-200 tracking-wide drop-shadow-lg inline-block"
+                    class="bs:text-base xxs:text-lg xs:text-xl md:text-2xl lg:text-3xl text-gray-200 tracking-wide drop-shadow-lg inline-block"
                 >
                     Design your bubble tank to fit your playstyle and pilot it
                     to slay bosses and hordes, unlock more weapons to expand
@@ -176,7 +178,7 @@
                     discover its treasures.
                 </p>
                 <div
-                    class="bs:mb-0.5 xs:mb-2.5 sm:mb-9 md:mb-18 lg:mb-24"
+                    class="bs:mb-0.5 xxs:mb-1.5 xs:mb-2.5 sm:mb-9 md:mb-18 lg:mb-24"
                 ></div>
             </div>
 
@@ -313,26 +315,24 @@
 
             <!-- Download -->
             <div
-                class="text-center bg-no-repeat bg-cover -my-2 bs:px-4 xs:px-5 sm:px-7 md:px-9 bs:my-0.5 xs:my-2.5 sm:my-9 md:my-18 lg:my-24"
+                class="text-center bg-no-repeat bg-cover -my-2 bs:px-4 xs:px-5 sm:px-7 md:px-9 bs:my-0.5 xxs:my-1.5 xs:my-2.5 sm:my-9 md:my-18 lg:my-24"
             >
                 <div
                     id="steam"
-                    class="max-w-2xl mx-auto bs:my-12 xss:my-16 xs:my-20 sm:my-28 md:my-32 lg:my-36"
+                    class="max-w-2xl mx-auto bs:my-12 xxs:my-16 xs:my-20 sm:my-28 md:my-32 lg:my-36"
                 >
-                    <div class="">
-                        <p
-                            class="bs:h-fit xxs:h-8 xs:h-9 sm:h-11 md:h-16 bs:text-xl xxs:text-2xl xs:text-3xl sm:text-4xl md:text-5xl font-extrabold text-transparent bg-clip-text bg-gradient-to-b from-teal-100 to-teal-300 tracking-wide drop-shadow-lg shadow-black inline-block"
-                        >
-                            Start your adventure!
-                        </p>
-                    </div>
+                    <p
+                        class="bs:h-fit xxs:h-8 xs:h-9 sm:h-11 md:h-16 bs:text-xl xxs:text-2xl xs:text-3xl sm:text-4xl md:text-5xl font-extrabold text-transparent bg-clip-text bg-gradient-to-b from-teal-100 to-teal-300 tracking-wide drop-shadow-lg shadow-black inline-block"
+                    >
+                        Start your adventure!
+                    </p>
                     <div class="mt-2">
                         <a
                             href="https://www.youtube.com/watch?v=dQw4w9WgXcQ"
                             target="_blank"
                             class="button flex flex-auto max-w-fit items-center bs:pl-5 xs:pl-2 bg-gradient-to-b from-teal-100 to-teal-300"
                             data-mdb-ripple="true"
-                            data-mdb-ripple-color="light"
+                            data-mdb-ripple-color="dark"
                         >
                             <svg
                                 xmlns="http://www.w3.org/2000/svg"
@@ -362,22 +362,20 @@
 
                 <div
                     id="discord"
-                    class="max-w-2xl mx-auto bs:my-12 xs:my-20 sm:my-28 md:my-32 lg:my-36"
+                    class="max-w-2xl mx-auto bs:my-12 xxs:my-16 xs:my-20 sm:my-28 md:my-32 lg:my-36"
                 >
-                    <div class="">
-                        <p
-                            class="bs:h-fit xxs:h-8 xs:h-9 sm:h-11 md:h-16 bs:text-xl xxs:text-2xl xs:text-3xl sm:text-4xl md:text-5xl font-extrabold text-transparent bg-clip-text bg-gradient-to-b from-teal-100 to-teal-300 tracking-wide drop-shadow-lg shadow-black inline-block"
-                        >
-                            Chat with the community
-                        </p>
-                    </div>
+                    <p
+                        class="bs:h-fit xxs:h-8 xs:h-9 sm:h-11 md:h-16 bs:text-xl xxs:text-2xl xs:text-3xl sm:text-4xl md:text-5xl font-extrabold text-transparent bg-clip-text bg-gradient-to-b from-teal-100 to-teal-300 tracking-wide drop-shadow-lg shadow-black inline-block"
+                    >
+                        Chat with the community
+                    </p>
                     <div class="mt-2">
                         <a
                             href="https://discord.gg/5V88S5e5wC"
                             target="_blank"
                             class="button flex flex-auto max-w-fit items-center bs:pl-5 xs:pl-4 bg-gradient-to-b from-teal-100 to-teal-300"
                             data-mdb-ripple="true"
-                            data-mdb-ripple-color="light"
+                            data-mdb-ripple-color="dark"
                         >
                             <svg
                                 xmlns="http://www.w3.org/2000/svg"
@@ -402,22 +400,20 @@
 
                 <div
                     id="patreon"
-                    class="max-w-2xl mx-auto bs:my-12 xs:my-20 sm:my-28 md:my-32 lg:my-36"
+                    class="max-w-2xl mx-auto bs:my-12 xxs:my-16 xs:my-20 sm:my-28 md:my-32 lg:my-36"
                 >
-                    <div class="">
-                        <p
-                            class="bs:h-fit xxs:h-8 xs:h-9 sm:h-11 md:h-16 bs:text-xl xxs:text-2xl xs:text-3xl sm:text-4xl md:text-5xl font-extrabold text-transparent bg-clip-text bg-gradient-to-b from-teal-100 to-teal-300 tracking-wide drop-shadow-lg shadow-black inline-block"
-                        >
-                            Support my mission
-                        </p>
-                    </div>
+                    <p
+                        class="bs:h-fit xxs:h-8 xs:h-9 sm:h-11 md:h-16 bs:text-xl xxs:text-2xl xs:text-3xl sm:text-4xl md:text-5xl font-extrabold text-transparent bg-clip-text bg-gradient-to-b from-teal-100 to-teal-300 tracking-wide drop-shadow-lg shadow-black inline-block"
+                    >
+                        Support my mission
+                    </p>
                     <div class="mt-2">
                         <a
                             href="https://www.youtube.com/watch?v=dQw4w9WgXcQ"
                             target="_blank"
                             class="button flex flex-auto max-w-fit items-center bs:pl-5 xs:pl-2.5 bg-gradient-to-b from-teal-100 to-teal-300"
                             data-mdb-ripple="true"
-                            data-mdb-ripple-color="light"
+                            data-mdb-ripple-color="dark"
                         >
                             <svg
                                 xmlns="http://www.w3.org/2000/svg"
@@ -451,7 +447,7 @@
         </div>
 
         <!--Footer-->
-        <footer class="w-full bg-blue-900 mt-16">
+        <footer class="w-full bg-blue-900 mt-16 overflow-clip">
             <div
                 class="w-fit mx-auto mt-5 mb-7 flex flex-col sm:flex-row text-gray-200"
             >
@@ -463,7 +459,7 @@
                 </div>
 
                 <div
-                    class="m-auto bs:px-2 xs:px-10 bs:text-center sm:text-left"
+                    class="m-auto bs:px-2 xxs:px-6 xs:px-10 bs:text-center sm:text-left"
                 >
                     <p class="inline">
                         Need support or have a business inquiry?
