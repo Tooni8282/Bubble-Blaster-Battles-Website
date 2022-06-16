@@ -4162,6 +4162,15 @@ textarea.form-control.is-invalid {
   border-width: 0px;
 }
 
+.border-2 {
+  border-width: 2px;
+}
+
+.border-black {
+  --tw-border-opacity: 1;
+  border-color: rgb(0 0 0 / var(--tw-border-opacity));
+}
+
 .bg-blue-600 {
   --tw-bg-opacity: 1;
   background-color: rgb(37 99 235 / var(--tw-bg-opacity));
@@ -4332,6 +4341,10 @@ textarea.form-control.is-invalid {
 
 .outline {
   outline-style: solid;
+}
+
+.outline-4 {
+  outline-width: 4px;
 }
 
 .blur {
