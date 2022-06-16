@@ -4050,8 +4050,8 @@ textarea.form-control.is-invalid {
   max-width: none;
 }
 
-.max-w-xl {
-  max-width: 36rem;
+.max-w-2xl {
+  max-width: 42rem;
 }
 
 .max-w-fit {
@@ -4158,17 +4158,13 @@ textarea.form-control.is-invalid {
   background-color: rgb(30 58 138 / var(--tw-bg-opacity));
 }
 
-.bg-gradient-to-bl {
-  background-image: linear-gradient(to bottom left, var(--tw-gradient-stops));
-}
-
 .bg-gradient-to-b {
   background-image: linear-gradient(to bottom, var(--tw-gradient-stops));
 }
 
-.from-red-600 {
-  --tw-gradient-from: #dc2626;
-  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to, rgb(220 38 38 / 0));
+.from-yellow-400 {
+  --tw-gradient-from: #facc15;
+  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to, rgb(250 204 21 / 0));
 }
 
 .from-teal-100 {
@@ -4176,12 +4172,21 @@ textarea.form-control.is-invalid {
   --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to, rgb(204 251 241 / 0));
 }
 
-.to-yellow-400 {
-  --tw-gradient-to: #facc15;
+.from-teal-400 {
+  --tw-gradient-from: #2dd4bf;
+  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to, rgb(45 212 191 / 0));
+}
+
+.to-orange-500 {
+  --tw-gradient-to: #f97316;
 }
 
 .to-teal-300 {
   --tw-gradient-to: #5eead4;
+}
+
+.to-teal-500 {
+  --tw-gradient-to: #14b8a6;
 }
 
 .bg-cover {
@@ -4281,6 +4286,14 @@ textarea.form-control.is-invalid {
 
 .font-black {
   font-weight: 900;
+}
+
+.font-bold {
+  font-weight: 700;
+}
+
+.font-semibold {
+  font-weight: 600;
 }
 
 .tracking-widest {
@@ -4515,22 +4528,18 @@ textarea.form-control.is-invalid {
     margin-bottom: -5rem;
   }
 
-  .xxs\:h-7 {
-    height: 1.75rem;
-  }
-
   .xxs\:h-8 {
     height: 2rem;
-  }
-
-  .xxs\:text-lg {
-    font-size: 1.125rem;
-    line-height: 1.75rem;
   }
 
   .xxs\:text-2xl {
     font-size: 1.5rem;
     line-height: 2rem;
+  }
+
+  .xxs\:text-lg {
+    font-size: 1.125rem;
+    line-height: 1.75rem;
   }
 }
 
@@ -4578,8 +4587,8 @@ textarea.form-control.is-invalid {
     height: 2.25rem;
   }
 
-  .xs\:max-w-xl {
-    max-width: 36rem;
+  .xs\:max-w-none {
+    max-width: none;
   }
 
   .xs\:px-5 {
@@ -4807,6 +4816,11 @@ textarea.form-control.is-invalid {
 
   .lg\:inline {
     display: inline;
+  }
+
+  .lg\:px-11 {
+    padding-left: 2.75rem;
+    padding-right: 2.75rem;
   }
 
   .lg\:text-6xl {
