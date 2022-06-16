@@ -40,25 +40,27 @@
         </style>
     </head>
 
-    <body class="bg-sky-600 flex flex-col">
+    <body class="bg-blue-600 flex flex-col">
         <!-- Nav -->
-        <nav id="header" class="w-full z-30 top-0 py-2 text-white">
+        <nav id="header" class="w-full bg-blue-800 z-30 top-0">
             <div
-                class="w-full mx-auto flex flex-wrap items-center justify-between px-2"
+                class="w-full mx-auto my-3 flex flex-wrap items-center justify-between px-2"
             >
-                <div class="pl-4 flex items-center">
+                <div class="pl-3 drop-shadow-lg shadow-black">
                     <a href="#">
-                        <img class="w-12 h-12" src="./images/BBBLogo.svg" />
+                        <img class="w-14 h-14" src="./images/BBBLogo.svg" />
                     </a>
                 </div>
 
-                <div class="block md:hidden pr-4">
+                <div class="block md:hidden pr-3">
                     <button
+                        data-mdb-ripple="true"
+                        data-mdb-ripple-color="dark"
                         id="nav-toggle"
-                        class="button flex items-center px-3 py-2 border rounded text-gray-500 border-gray-600 hover:text-gray-800 hover:border-green-500 appearance-none focus:outline-none"
+                        class="button px-5 py-3"
                     >
                         <svg
-                            class="fill-current w-3 h-3"
+                            class="fill-current w-4 h-4"
                             viewBox="0 0 20 20"
                             xmlns="http://www.w3.org/2000/svg"
                         >
@@ -70,34 +72,55 @@
                 </div>
 
                 <div
-                    class="w-full flex-grow md:flex md:items-center md:w-auto hidden md:block mt-2 md:mt-0 text-black z-20"
+                    class="w-full flex-grow md:flex md:w-auto bs:hidden md:block bs:my-2 md:my-0 z-20"
                     id="nav-content"
                 >
-                    <ul
-                        class="list-reset md:flex justify-end flex-1 items-center"
-                    >
-                        <li class="mr-3">
-                            <a class="button py-2 px-4" href="#">Game</a>
-                        </li>
-                        <li class="mr-3">
-                            <a class="button py-2 px-4" href="#">Download</a>
-                        </li>
-                        <li class="mr-3">
-                            <a class="button py-2 px-4" href="#">Community</a>
-                        </li>
-                        <li class="mr-3">
-                            <a class="button py-2 px-4" href="#"
-                                >Support Project</a
+                    <ul class="justify-end list-reset flex-1 md:flex">
+                        <li
+                            class="w-fit bs:mx-auto md:mx-0 bs:my-2 md:my-0 md:mr-3"
+                        >
+                            <button
+                                data-mdb-ripple="true"
+                                data-mdb-ripple-color="dark"
+                                class="button bs:py-1 md:py-2 px-4"
                             >
+                                Game
+                            </button>
+                        </li>
+                        <li
+                            class="w-fit bs:mx-auto md:mx-0 bs:my-2 md:my-0 md:mr-3"
+                        >
+                            <button
+                                data-mdb-ripple="true"
+                                data-mdb-ripple-color="dark"
+                                class="button bs:py-1 md:py-2 px-4"
+                            >
+                                Download
+                            </button>
+                        </li>
+                        <li
+                            class="w-fit bs:mx-auto md:mx-0 bs:my-2 md:my-0 md:mr-3"
+                        >
+                            <button
+                                data-mdb-ripple="true"
+                                data-mdb-ripple-color="dark"
+                                class="button bs:py-1 md:py-2 px-4"
+                            >
+                                Community
+                            </button>
+                        </li>
+                        <li
+                            class="w-fit bs:mx-auto md:mx-0 bs:my-2 md:my-0 md:mr-3"
+                        >
+                            <button
+                                data-mdb-ripple="true"
+                                data-mdb-ripple-color="dark"
+                                class="button bs:py-1 md:py-2 px-4"
+                            >
+                                Support Project
+                            </button>
                         </li>
                     </ul>
-                    <button
-                        data-mdb-ripple="true"
-                        data-mdb-ripple-color="dark"
-                        class="mx-auto md:mx-0 bg-white hover:underline text-gray-800 font-extrabold rounded py-1 px-4 shadow opacity-75"
-                    >
-                        Support Project
-                    </button>
                 </div>
             </div>
         </nav>
@@ -141,7 +164,7 @@
                     <img
                         src="./images/BubbleTankBattle.png"
                         id="bubble-tank-battle"
-                        class="mx-auto relative"
+                        class="mx-auto relative drop-shadow-lg shadow-black"
                     />
                 </div>
                 <p
@@ -298,7 +321,7 @@
                 >
                     <div class="">
                         <p
-                            class="bs:h-fit xxs:h-8 xs:h-9 sm:h-11 md:h-16 bs:text-xl xxs:text-2xl xs:text-3xl sm:text-4xl md:text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-b from-teal-100 to-teal-300 tracking-wide drop-shadow-lg shadow-black inline-block"
+                            class="bs:h-fit xxs:h-8 xs:h-9 sm:h-11 md:h-16 bs:text-xl xxs:text-2xl xs:text-3xl sm:text-4xl md:text-5xl font-extrabold text-transparent bg-clip-text bg-gradient-to-b from-teal-100 to-teal-300 tracking-wide drop-shadow-lg shadow-black inline-block"
                         >
                             Start your adventure!
                         </p>
@@ -329,7 +352,7 @@
                                 ></path>
                             </svg>
                             <p
-                                class="bs:max-w-fit xs:max-w-none bs:pl-3 xs:pl-1 pr-5 text-gray-900 bs:text-2xl xs:text-3xl inline-block"
+                                class="bs:max-w-fit xs:max-w-none bs:pl-3 xs:pl-1 pr-5 bs:text-2xl xs:text-3xl inline-block"
                             >
                                 Get it on Steam
                             </p>
@@ -343,7 +366,7 @@
                 >
                     <div class="">
                         <p
-                            class="bs:h-fit xxs:h-8 xs:h-9 sm:h-11 md:h-16 bs:text-xl xxs:text-2xl xs:text-3xl sm:text-4xl md:text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-b from-teal-100 to-teal-300 tracking-wide drop-shadow-lg shadow-black inline-block"
+                            class="bs:h-fit xxs:h-8 xs:h-9 sm:h-11 md:h-16 bs:text-xl xxs:text-2xl xs:text-3xl sm:text-4xl md:text-5xl font-extrabold text-transparent bg-clip-text bg-gradient-to-b from-teal-100 to-teal-300 tracking-wide drop-shadow-lg shadow-black inline-block"
                         >
                             Chat with the community
                         </p>
@@ -369,7 +392,7 @@
                                 />
                             </svg>
                             <p
-                                class="bs:max-w-fit xs:max-w-none bs:pl-1 xs:pl-3 bs:pr-4 xs:pr-6 text-gray-900 bs:text-2xl xs:text-3xl inline-block"
+                                class="bs:max-w-fit xs:max-w-none bs:pl-1 xs:pl-3 bs:pr-4 xs:pr-6 bs:text-2xl xs:text-3xl inline-block"
                             >
                                 Join the Discord
                             </p>
@@ -383,7 +406,7 @@
                 >
                     <div class="">
                         <p
-                            class="bs:h-fit xxs:h-8 xs:h-9 sm:h-11 md:h-16 bs:text-xl xxs:text-2xl xs:text-3xl sm:text-4xl md:text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-b from-teal-100 to-teal-300 tracking-wide drop-shadow-lg shadow-black inline-block"
+                            class="bs:h-fit xxs:h-8 xs:h-9 sm:h-11 md:h-16 bs:text-xl xxs:text-2xl xs:text-3xl sm:text-4xl md:text-5xl font-extrabold text-transparent bg-clip-text bg-gradient-to-b from-teal-100 to-teal-300 tracking-wide drop-shadow-lg shadow-black inline-block"
                         >
                             Support my mission
                         </p>
@@ -417,7 +440,7 @@
                                 </g>
                             </svg>
                             <p
-                                class="bs:max-w-fit xs:max-w-none bs:pl-3 xs:pl-1 pr-5 text-gray-900 bs:text-2xl xs:text-3xl inline-block"
+                                class="bs:max-w-fit xs:max-w-none bs:pl-3 xs:pl-1 pr-5 bs:text-2xl xs:text-3xl inline-block"
                             >
                                 Support on Patreon
                             </p>
@@ -430,7 +453,7 @@
         <!--Footer-->
         <footer class="w-full bg-blue-900 mt-16">
             <div
-                class="w-fit mx-auto my-5 flex flex-col sm:flex-row text-gray-200"
+                class="w-fit mx-auto mt-5 mb-7 flex flex-col sm:flex-row text-gray-200"
             >
                 <div class="bs:mx-auto sm:ml-auto bs:mb-7 sm:mb-0 px-10">
                     <div class="w-fit ml-auto">
@@ -457,7 +480,7 @@
                 </div>
             </div>
             <p
-                class="bs:-mt-3 sm:-mt-5 pr-1 bs:text-center sm:text-right text-xs text-blue-700"
+                class="bs:-mt-3 sm:-mt-7 pr-1 bs:text-center sm:text-right text-xs text-blue-700"
             >
                 © 2022 Moonfries. All rights reserved.
             </p>
@@ -484,14 +507,14 @@
                     //we have NOT clicked on the menu content
                     if (checkParent(target, navMenu)) {
                         //we have clicked on the menu toggle - toggle menu
-                        if (navMenuDiv.classList.contains("hidden")) {
-                            navMenuDiv.classList.remove("hidden");
+                        if (navMenuDiv.classList.contains("bs:hidden")) {
+                            navMenuDiv.classList.remove("bs:hidden");
                         } else {
-                            navMenuDiv.classList.add("hidden");
+                            navMenuDiv.classList.add("bs:hidden");
                         }
                     } else {
                         //we have clicked outside the menu and not on a link - hide menu
-                        navMenuDiv.classList.add("hidden");
+                        navMenuDiv.classList.add("bs:hidden");
                     }
                 }
             }
