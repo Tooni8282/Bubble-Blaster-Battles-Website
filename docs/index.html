@@ -42,7 +42,10 @@
 
     <body class="bg-blue-600 flex flex-col">
         <!-- Nav -->
-        <nav id="header" class="w-full bg-blue-800 top-0 z-30">
+        <nav
+            id="header"
+            class="w-full relative top-0 bg-gradient-to-r from-blue-800 to-blue-500 z-30"
+        >
             <div
                 class="w-full mx-auto my-3 flex flex-wrap items-center justify-between px-2"
             >
@@ -129,21 +132,19 @@
 
         <div class="max-w-none h-auto">
             <!-- Game Trailer -->
-            <div class="flex items-center justify-center">
-                <video
-                    width="100%"
-                    alt="Bubble Blaster Battles Trailer"
-                    poster="./images/BBBImage2.jpeg"
-                    autoplay
-                    muted
-                    loop
-                    playsinline
-                >
-                    <source src="./videos/BBBTrailer.mp4" type="video/mp4" />
-                    <source src="./videos/BBBTrailer.webm" type="video/webm" />
-                    Your browser does not support the video tag :(
-                </video>
-            </div>
+            <video
+                width="100%"
+                alt="Bubble Blaster Battles Trailer"
+                poster="./images/BBBImage2.jpeg"
+                autoplay
+                muted
+                loop
+                playsinline
+            >
+                <source src="./videos/BBBTrailer.mp4" type="video/mp4" />
+                <source src="./videos/BBBTrailer.webm" type="video/webm" />
+                Your browser does not support the video tag :(
+            </video>
 
             <!-- Game -->
             <div
@@ -322,7 +323,7 @@
                     class="max-w-2xl mx-auto bs:my-12 xxs:my-16 xs:my-20 sm:my-28 md:my-32 lg:my-36"
                 >
                     <p
-                        class="bs:h-fit xxs:h-8 xs:h-9 sm:h-11 md:h-16 bs:text-xl xxs:text-2xl xs:text-3xl sm:text-4xl md:text-5xl font-extrabold text-transparent bg-clip-text bg-gradient-to-b from-teal-100 to-teal-300 tracking-wide drop-shadow-lg shadow-black inline"
+                        class="bs:h-fit xxs:h-8 xs:h-9 sm:h-11 md:h-16 bs:text-xl xxs:text-2xl xs:text-3xl sm:text-4xl md:text-5xl font-extrabold text-transparent bg-clip-text bg-gradient-to-b from-teal-100 to-teal-300 tracking-wide drop-shadow-lg shadow-black inline-block"
                     >
                         Start your adventure!
                     </p>
@@ -365,7 +366,7 @@
                     class="max-w-2xl mx-auto bs:my-12 xxs:my-16 xs:my-20 sm:my-28 md:my-32 lg:my-36"
                 >
                     <p
-                        class="bs:h-fit xxs:h-8 xs:h-9 sm:h-11 md:h-16 bs:text-xl xxs:text-2xl xs:text-3xl sm:text-4xl md:text-5xl font-extrabold text-transparent bg-clip-text bg-gradient-to-b from-teal-100 to-teal-300 tracking-wide drop-shadow-lg shadow-black inline"
+                        class="bs:h-fit xxs:h-8 xs:h-9 sm:h-11 md:h-16 bs:text-xl xxs:text-2xl xs:text-3xl sm:text-4xl md:text-5xl font-extrabold text-transparent bg-clip-text bg-gradient-to-b from-teal-100 to-teal-300 tracking-wide drop-shadow-lg shadow-black inline-block"
                     >
                         Chat with the community
                     </p>
@@ -403,7 +404,7 @@
                     class="max-w-2xl mx-auto bs:my-12 xxs:my-16 xs:my-20 sm:my-28 md:my-32 lg:my-36"
                 >
                     <p
-                        class="bs:h-fit xxs:h-8 xs:h-9 sm:h-11 md:h-16 bs:text-xl xxs:text-2xl xs:text-3xl sm:text-4xl md:text-5xl font-extrabold text-transparent bg-clip-text bg-gradient-to-b from-teal-100 to-teal-300 tracking-wide drop-shadow-lg shadow-black inline"
+                        class="bs:h-fit xxs:h-8 xs:h-9 sm:h-11 md:h-16 bs:text-xl xxs:text-2xl xs:text-3xl sm:text-4xl md:text-5xl font-extrabold text-transparent bg-clip-text bg-gradient-to-b from-teal-100 to-teal-300 tracking-wide drop-shadow-lg shadow-black inline-block"
                     >
                         Support my mission
                     </p>
@@ -490,6 +491,31 @@
             // window.onbeforeunload = function () {
             //     window.scrollTo(0, 0);
             // };
+
+            /* Toggle Nav Visibility */
+            var header = document.getElementById("header");
+
+            var lastScrollTop =
+                window.pageYOffset || document.documentElement.scrollTop;
+
+            window.addEventListener(
+                "scroll",
+                function () {
+                    var st =
+                        window.pageYOffset ||
+                        document.documentElement.scrollTop;
+                    if (st > lastScrollTop) {
+                        //scrolling down
+                        header.classList.remove("sticky");
+                    } else {
+                        //scrolling up
+                        header.classList.add("sticky");
+                    }
+                    //store scroll value for later - negative scroll (possible on mobile) flattened to 0
+                    lastScrollTop = st <= 0 ? 0 : st;
+                },
+                false
+            );
 
             /* Toggle dropdown list */
             var navMenuDiv = document.getElementById("nav-content");
