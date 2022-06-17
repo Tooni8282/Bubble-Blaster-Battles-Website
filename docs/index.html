@@ -37,6 +37,13 @@
             html {
                 font-family: "Jua", sans-serif;
             }
+
+            #header {
+                transition: all 0.15s ease-out;
+            }
+            #header.hide {
+                top: -80px;
+            }
         </style>
     </head>
 
@@ -44,10 +51,10 @@
         <!-- Nav -->
         <nav
             id="header"
-            class="w-full relative top-0 bg-gradient-to-r from-blue-800 to-blue-500 z-30"
+            class="w-full fixed top-0 bg-gradient-to-r from-blue-800 to-blue-500 z-30"
         >
             <div
-                class="w-full mx-auto my-3 flex flex-wrap items-center justify-between px-2"
+                class="mx-auto my-3 px-2 flex flex-wrap items-center justify-between"
             >
                 <div class="pl-3 drop-shadow-lg shadow-black">
                     <a href="#">
@@ -130,7 +137,7 @@
             </div>
         </nav>
 
-        <div class="max-w-none h-auto">
+        <div class="max-w-none h-auto mt-20">
             <!-- Game Trailer -->
             <video
                 width="100%"
@@ -492,7 +499,7 @@
             //     window.scrollTo(0, 0);
             // };
 
-            /* Toggle Nav Visibility */
+            /* Toggle Header Visibility */
             var header = document.getElementById("header");
 
             var lastScrollTop =
@@ -506,10 +513,10 @@
                         document.documentElement.scrollTop;
                     if (st > lastScrollTop) {
                         //scrolling down
-                        header.classList.remove("sticky");
+                        header.classList.add("hide");
                     } else {
                         //scrolling up
-                        header.classList.add("sticky");
+                        header.classList.remove("hide");
                     }
                     //store scroll value for later - negative scroll (possible on mobile) flattened to 0
                     lastScrollTop = st <= 0 ? 0 : st;
@@ -519,7 +526,7 @@
 
             /* Toggle dropdown list */
             var navMenuDiv = document.getElementById("nav-content");
-            var navMenu = document.getElementById("nav-toggle");
+            var navToggle = document.getElementById("nav-toggle");
 
             document.onclick = check;
             function check(e) {
@@ -527,7 +534,7 @@
 
                 if (!checkParent(target, navMenuDiv)) {
                     //we have NOT clicked on the menu content
-                    if (checkParent(target, navMenu)) {
+                    if (checkParent(target, navToggle)) {
                         //we have clicked on the menu toggle - toggle menu
                         if (navMenuDiv.classList.contains("bs:hidden")) {
                             navMenuDiv.classList.remove("bs:hidden");
