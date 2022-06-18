@@ -38,6 +38,11 @@
                 font-family: "Jua", sans-serif;
             }
 
+            /* Prevent Webpage Scroll-Pushing On Reload */
+            body {
+                overflow-anchor: none;
+            }
+
             /* Header and Nav Content Slide-Out Animations */
             #header {
                 transition: all 0.15s ease;
@@ -210,7 +215,7 @@
                 data-bs-pause="false"
             >
                 <div
-                    class="carousel-indicators absolute right-0 bottom-0 left-0 flex justify-center p-0 mb-4"
+                    class="carousel-indicators absolute right-0 bottom-0 left-0 flex justify-center p-0"
                 >
                     <button
                         type="button"
@@ -506,11 +511,6 @@
             /* Build Bubbly Background */
             bubbly({ colorStart: "#0094FF", colorStop: "#5532e3" });
 
-            /* Autoscroll To Top On Refresh */
-            window.onbeforeunload = function () {
-                window.scrollTo(0, 0);
-            };
-
             /* Toggle Header Visibility */
             const header = document.getElementById("header");
             var buttonScrollActive = false;
@@ -526,10 +526,10 @@
                         clearTimeout(scrollTimeout);
                         scrollTimeout = setTimeout(function () {
                             buttonScrollActive = false;
-                        }, 100);
+                        }, 250);
                         return;
                     }
-                    
+
                     //gather the scrolltop value and compare it to the previous scrolltop
                     let scrollTop =
                         window.pageYOffset ||
@@ -655,11 +655,15 @@
             /* Parallax Scrolling */
             const bubbleTanks = document.getElementById("bubble-tank-battle");
 
+            window.onload = Parallax();
             window.addEventListener("scroll", function () {
+                Parallax();
+            });
+            function Parallax() {
                 let value = window.scrollY;
 
                 bubbleTanks.style.top = value * -0.25 + "px";
-            });
+            }
         </script>
     </body>
 </html>
