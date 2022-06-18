@@ -45,10 +45,10 @@
             #header.hide {
                 top: -80px;
             }
-            #nav-content {
+            #navContent {
                 transition: all 0.3s ease;
             }
-            #nav-content.show {
+            #navContent.show {
                 margin-top: 0px;
             }
         </style>
@@ -73,7 +73,7 @@
                     <button
                         data-mdb-ripple="true"
                         data-mdb-ripple-color="dark"
-                        id="nav-toggle"
+                        id="navToggle"
                         class="button px-5 py-3"
                     >
                         <svg
@@ -89,8 +89,8 @@
                 </div>
 
                 <div
+                    id="navContent"
                     class="w-full -mt-80 block flex-grow md:flex md:w-auto bs:my-2 md:my-0 text-lg"
-                    id="nav-content"
                 >
                     <ul
                         class="list-reset flex-1 md:flex justify-end items-center"
@@ -101,6 +101,7 @@
                             <button
                                 data-mdb-ripple="true"
                                 data-mdb-ripple-color="dark"
+                                id="game"
                                 class="button bs:py-1 md:py-1.5 px-4"
                             >
                                 Game
@@ -112,6 +113,7 @@
                             <button
                                 data-mdb-ripple="true"
                                 data-mdb-ripple-color="dark"
+                                id="download"
                                 class="button bs:py-1 md:py-1.5 px-4"
                             >
                                 Download
@@ -123,6 +125,7 @@
                             <button
                                 data-mdb-ripple="true"
                                 data-mdb-ripple-color="dark"
+                                id="community"
                                 class="button bs:py-1 md:py-1.5 px-4"
                             >
                                 Community
@@ -134,6 +137,7 @@
                             <button
                                 data-mdb-ripple="true"
                                 data-mdb-ripple-color="dark"
+                                id="supportProject"
                                 class="button bs:py-1 md:py-1.5 px-4"
                             >
                                 Support Project
@@ -165,6 +169,7 @@
                 class="bg-no-repeat bg-cover -my-2 text-center bs:px-3 xs:px-5 sm:px-7 md:px-9 lg:px-11 py-12"
             >
                 <h1
+                    id="BBBTitleText"
                     class="bs:text-xl xxs:text-2xl xs:text-3xl sm:text-4xl md:text-5xl lg:text-6xl xs:mt-4 sm:mt-8 md:mt-14 lg:mt-20 bs:mb-0.5 xs:mb-1 sm:mb-2 md:mb-3 lg:mb-4 font-black text-transparent bg-clip-text bg-gradient-to-b from-yellow-400 to-orange-500 tracking-widest tracking-wide drop-shadow-lg flex-inline"
                 >
                     Bubble Blaster Battles
@@ -507,43 +512,55 @@
             };
 
             /* Toggle Header Visibility */
-            var header = document.getElementById("header");
+            const header = document.getElementById("header");
+            var buttonScrollActive = false;
+            var scrollTimeout;
             var lastScrollTop =
                 window.pageYOffset || document.documentElement.scrollTop;
 
             window.addEventListener(
                 "scroll",
                 function () {
-                    var st =
+                    //if buttonScrollActive is true, reset scroll timer and stop function
+                    if (buttonScrollActive) {
+                        clearTimeout(scrollTimeout);
+                        scrollTimeout = setTimeout(function () {
+                            buttonScrollActive = false;
+                        }, 100);
+                        return;
+                    }
+                    
+                    //gather the scrolltop value and compare it to the previous scrolltop
+                    let scrollTop =
                         window.pageYOffset ||
                         document.documentElement.scrollTop;
-                    if (st > lastScrollTop) {
-                        //scrolling down
+                    if (scrollTop > lastScrollTop) {
+                        //scrolling down - hide the header and menu
                         header.classList.add("hide");
                         if (navMenuDiv.classList.contains("show")) {
                             navMenuDiv.classList.remove("show");
                         }
                     } else {
-                        //scrolling up
+                        //scrolling up - show the header
                         header.classList.remove("hide");
                     }
                     //store scroll value for later - negative scroll (possible on mobile) flattened to 0
-                    lastScrollTop = st <= 0 ? 0 : st;
+                    lastScrollTop = scrollTop <= 0 ? 0 : scrollTop;
                 },
                 false
             );
 
-            /* Toggle dropdown list */
-            var navMenuDiv = document.getElementById("nav-content");
-            var navToggle = document.getElementById("nav-toggle");
+            /* Toggle Dropdown List */
+            const navMenuDiv = document.getElementById("navContent");
+            const navToggle = document.getElementById("navToggle");
 
-            document.onclick = check;
-            function check(e) {
-                var target = (e && e.target) || (event && event.srcElement);
+            document.onclick = CheckClick;
+            function CheckClick(e) {
+                let target = (e && e.target) || (event && event.srcElement);
 
-                if (!checkParent(target, navMenuDiv)) {
+                if (!CheckParent(target, navMenuDiv)) {
                     //we have NOT clicked on the menu content
-                    if (checkParent(target, navToggle)) {
+                    if (CheckParent(target, navToggle)) {
                         //we have clicked on the menu toggle - toggle menu
                         if (!navMenuDiv.classList.contains("show")) {
                             navMenuDiv.classList.add("show");
@@ -556,7 +573,7 @@
                     }
                 }
             }
-            function checkParent(t, elm) {
+            function CheckParent(t, elm) {
                 while (t.parentNode) {
                     if (t == elm) {
                         return true;
@@ -566,11 +583,80 @@
                 return false;
             }
 
+            /* Dropdown Menu Button Functions */
+            document.getElementById("game").addEventListener(
+                "click",
+                function () {
+                    ScrollTo(0);
+                },
+                false
+            );
+            document.getElementById("download").addEventListener(
+                "click",
+                function () {
+                    ScrollTo(1);
+                },
+                false
+            );
+            document.getElementById("community").addEventListener(
+                "click",
+                function () {
+                    ScrollTo(2);
+                },
+                false
+            );
+            document.getElementById("supportProject").addEventListener(
+                "click",
+                function () {
+                    ScrollTo(3);
+                },
+                false
+            );
+
+            function ScrollTo(x) {
+                //scroll to the section determined by x
+                switch (x) {
+                    case 0:
+                        document.getElementById("BBBTitleText").scrollIntoView({
+                            behavior: "smooth",
+                            block: "start",
+                        });
+                        break;
+                    case 1:
+                        document.getElementById("steam").scrollIntoView({
+                            behavior: "smooth",
+                            block: "center",
+                        });
+                        break;
+                    case 2:
+                        document.getElementById("discord").scrollIntoView({
+                            behavior: "smooth",
+                            block: "center",
+                        });
+                        break;
+                    case 3:
+                        document.getElementById("patreon").scrollIntoView({
+                            behavior: "smooth",
+                            block: "center",
+                        });
+                        break;
+                }
+                //set buttonScrollActive to true so that the auto scroll
+                //won't be detected in the scroll event listener
+                buttonScrollActive = true;
+
+                //hide the header and menu
+                header.classList.add("hide");
+                if (navMenuDiv.classList.contains("show")) {
+                    navMenuDiv.classList.remove("show");
+                }
+            }
+
             /* Parallax Scrolling */
-            var bubbleTanks = document.getElementById("bubble-tank-battle");
+            const bubbleTanks = document.getElementById("bubble-tank-battle");
 
             window.addEventListener("scroll", function () {
-                var value = window.scrollY;
+                let value = window.scrollY;
 
                 bubbleTanks.style.top = value * -0.25 + "px";
             });
