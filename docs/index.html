@@ -38,11 +38,18 @@
                 font-family: "Jua", sans-serif;
             }
 
+            /* Header and Nav Content Slide-Out Animations */
             #header {
-                transition: all 0.15s ease-out;
+                transition: all 0.15s ease;
             }
             #header.hide {
                 top: -80px;
+            }
+            #nav-content {
+                transition: all 0.3s ease;
+            }
+            #nav-content.show {
+                margin-top: 0px;
             }
         </style>
     </head>
@@ -51,7 +58,7 @@
         <!-- Nav -->
         <nav
             id="header"
-            class="w-full fixed top-0 bg-gradient-to-r from-blue-800 to-blue-500 z-30"
+            class="w-full fixed top-0 bg-gradient-to-r from-blue-800 to-blue-500 z-30 drop-shadow-lg shadow-black"
         >
             <div
                 class="mx-auto my-3 px-2 flex flex-wrap items-center justify-between"
@@ -82,7 +89,7 @@
                 </div>
 
                 <div
-                    class="w-full flex-grow md:flex md:w-auto bs:hidden md:block bs:my-2 md:my-0 text-lg"
+                    class="w-full -mt-80 block flex-grow md:flex md:w-auto bs:my-2 md:my-0 text-lg"
                     id="nav-content"
                 >
                     <ul
@@ -495,13 +502,12 @@
             bubbly({ colorStart: "#0094FF", colorStop: "#5532e3" });
 
             /* Autoscroll To Top On Refresh */
-            // window.onbeforeunload = function () {
-            //     window.scrollTo(0, 0);
-            // };
+            window.onbeforeunload = function () {
+                window.scrollTo(0, 0);
+            };
 
             /* Toggle Header Visibility */
             var header = document.getElementById("header");
-
             var lastScrollTop =
                 window.pageYOffset || document.documentElement.scrollTop;
 
@@ -514,6 +520,9 @@
                     if (st > lastScrollTop) {
                         //scrolling down
                         header.classList.add("hide");
+                        if (navMenuDiv.classList.contains("show")) {
+                            navMenuDiv.classList.remove("show");
+                        }
                     } else {
                         //scrolling up
                         header.classList.remove("hide");
@@ -536,14 +545,14 @@
                     //we have NOT clicked on the menu content
                     if (checkParent(target, navToggle)) {
                         //we have clicked on the menu toggle - toggle menu
-                        if (navMenuDiv.classList.contains("bs:hidden")) {
-                            navMenuDiv.classList.remove("bs:hidden");
+                        if (!navMenuDiv.classList.contains("show")) {
+                            navMenuDiv.classList.add("show");
                         } else {
-                            navMenuDiv.classList.add("bs:hidden");
+                            navMenuDiv.classList.remove("show");
                         }
                     } else {
                         //we have clicked outside the menu and not on a link - hide menu
-                        navMenuDiv.classList.add("bs:hidden");
+                        navMenuDiv.classList.remove("show");
                     }
                 }
             }

@@ -3923,12 +3923,12 @@ textarea.form-control.is-invalid {
   left: 0px;
 }
 
-.top-5 {
-  top: 1.25rem;
+.top-64 {
+  top: 16rem;
 }
 
-.top-20 {
-  top: 5rem;
+.-top-64 {
+  top: -16rem;
 }
 
 .z-30 {
@@ -3962,6 +3962,10 @@ textarea.form-control.is-invalid {
   margin-bottom: -0.5rem;
 }
 
+.mt-20 {
+  margin-top: 5rem;
+}
+
 .mb-4 {
   margin-bottom: 1rem;
 }
@@ -3986,20 +3990,16 @@ textarea.form-control.is-invalid {
   margin-left: auto;
 }
 
-.mb-5 {
-  margin-bottom: 1.25rem;
+.-mt-64 {
+  margin-top: -16rem;
 }
 
-.mb-10 {
-  margin-bottom: 2.5rem;
+.-mt-72 {
+  margin-top: -18rem;
 }
 
-.mt-10 {
-  margin-top: 2.5rem;
-}
-
-.mt-20 {
-  margin-top: 5rem;
+.-mt-80 {
+  margin-top: -20rem;
 }
 
 .block {
@@ -4163,22 +4163,22 @@ textarea.form-control.is-invalid {
   background-color: rgb(37 99 235 / var(--tw-bg-opacity));
 }
 
-.bg-blue-800 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(30 64 175 / var(--tw-bg-opacity));
-}
-
 .bg-blue-900 {
   --tw-bg-opacity: 1;
   background-color: rgb(30 58 138 / var(--tw-bg-opacity));
+}
+
+.bg-gradient-to-r {
+  background-image: linear-gradient(to right, var(--tw-gradient-stops));
 }
 
 .bg-gradient-to-b {
   background-image: linear-gradient(to bottom, var(--tw-gradient-stops));
 }
 
-.bg-gradient-to-r {
-  background-image: linear-gradient(to right, var(--tw-gradient-stops));
+.from-blue-800 {
+  --tw-gradient-from: #1e40af;
+  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to, rgb(30 64 175 / 0));
 }
 
 .from-yellow-400 {
@@ -4191,19 +4191,8 @@ textarea.form-control.is-invalid {
   --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to, rgb(204 251 241 / 0));
 }
 
-.from-blue-400 {
-  --tw-gradient-from: #60a5fa;
-  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to, rgb(96 165 250 / 0));
-}
-
-.from-blue-800 {
-  --tw-gradient-from: #1e40af;
-  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to, rgb(30 64 175 / 0));
-}
-
-.from-blue-900 {
-  --tw-gradient-from: #1e3a8a;
-  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to, rgb(30 58 138 / 0));
+.to-blue-500 {
+  --tw-gradient-to: #3b82f6;
 }
 
 .to-orange-500 {
@@ -4212,18 +4201,6 @@ textarea.form-control.is-invalid {
 
 .to-teal-300 {
   --tw-gradient-to: #5eead4;
-}
-
-.to-blue-500 {
-  --tw-gradient-to: #3b82f6;
-}
-
-.to-blue-800 {
-  --tw-gradient-to: #1e40af;
-}
-
-.to-blue-400 {
-  --tw-gradient-to: #60a5fa;
 }
 
 .bg-cover {
@@ -4296,10 +4273,6 @@ textarea.form-control.is-invalid {
 
 .pr-1 {
   padding-right: 0.25rem;
-}
-
-.pt-5 {
-  padding-top: 1.25rem;
 }
 
 .text-center {
@@ -4382,20 +4355,6 @@ textarea.form-control.is-invalid {
   transition-duration: 150ms;
 }
 
-.transition-all {
-  transition-property: all;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  transition-duration: 150ms;
-}
-
-.delay-150 {
-  transition-delay: 150ms;
-}
-
-.ease-in-out {
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-}
-
 .hover\:no-underline:hover {
   -webkit-text-decoration-line: none;
           text-decoration-line: none;
@@ -4417,14 +4376,19 @@ textarea.form-control.is-invalid {
 }
 
 @media (min-width: 0px) {
-  .bs\:my-2 {
-    margin-top: 0.5rem;
-    margin-bottom: 0.5rem;
-  }
-
   .bs\:mx-auto {
     margin-left: auto;
     margin-right: auto;
+  }
+
+  .bs\:my-4 {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  .bs\:my-2 {
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
   }
 
   .bs\:my-0\.5 {
@@ -4735,10 +4699,6 @@ textarea.form-control.is-invalid {
     height: 2.75rem;
   }
 
-  .sm\:h-32 {
-    height: 8rem;
-  }
-
   .sm\:flex-row {
     flex-direction: row;
   }
@@ -4768,14 +4728,14 @@ textarea.form-control.is-invalid {
 }
 
 @media (min-width: 768px) {
-  .md\:my-0 {
-    margin-top: 0px;
-    margin-bottom: 0px;
-  }
-
   .md\:mx-0 {
     margin-left: 0px;
     margin-right: 0px;
+  }
+
+  .md\:my-0 {
+    margin-top: 0px;
+    margin-bottom: 0px;
   }
 
   .md\:my-32 {
@@ -4817,18 +4777,6 @@ textarea.form-control.is-invalid {
 
   .md\:h-16 {
     height: 4rem;
-  }
-
-  .md\:h-32 {
-    height: 8rem;
-  }
-
-  .md\:h-12 {
-    height: 3rem;
-  }
-
-  .md\:h-14 {
-    height: 3.5rem;
   }
 
   .md\:w-auto {
