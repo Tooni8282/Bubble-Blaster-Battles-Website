@@ -11,8 +11,10 @@ module.exports = {
             xxs: "360px",
             xs: "475px",
             ...screens,
-            betterhover: { raw: "(hover:hover)" },
         },
+    },
+    future: {
+        hoverOnlyWhenSupported: true,
     },
     plugins: [require("tw-elements/dist/plugin")],
 };

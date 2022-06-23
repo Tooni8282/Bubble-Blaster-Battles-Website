@@ -21,8 +21,10 @@
     "homepage": "https://github.com/Tooni8282/Bubble-Blaster-Battles-Website#readme",
     "dependencies": {
         "@popperjs/core": "^2.11.5",
+        "autoprefixer": "^10.4.7",
         "bubbly-bg": "^1.0.0",
-        "tailwindcss": "^3.0.24",
+        "postcss": "^8.4.14",
+        "tailwindcss": "^3.1.4",
         "tw-elements": "^1.0.0-alpha12"
     }
 }
