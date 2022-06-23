@@ -3949,7 +3949,7 @@ textarea.form-control.is-invalid {
   --tw-gradient-from: #ccfbf1;
   --tw-gradient-to: rgb(204 251 241 / 0);
   --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
-  --tw-gradient-to: #5eead4;
+  --tw-gradient-to: #2dd4bf;
   text-align: center;
   font-weight: 800;
   --tw-text-opacity: 1;
@@ -3976,6 +3976,10 @@ textarea.form-control.is-invalid {
     --tw-scale-x: 1.1;
     --tw-scale-y: 1.1;
     transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+    --tw-gradient-from: #99f6e4;
+    --tw-gradient-to: rgb(153 246 228 / 0);
+    --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
+    --tw-gradient-to: #14b8a6;
     -webkit-text-decoration-line: underline;
             text-decoration-line: underline;
   }
@@ -4319,8 +4323,8 @@ textarea.form-control.is-invalid {
   --tw-gradient-to: #f97316;
 }
 
-.to-teal-300 {
-  --tw-gradient-to: #5eead4;
+.to-teal-400 {
+  --tw-gradient-to: #2dd4bf;
 }
 
 .bg-cover {
@@ -4830,6 +4834,11 @@ textarea.form-control.is-invalid {
   .sm\:my-28 {
     margin-top: 7rem;
     margin-bottom: 7rem;
+  }
+
+  .sm\:mx-0 {
+    margin-left: 0px;
+    margin-right: 0px;
   }
 
   .sm\:mt-8 {
