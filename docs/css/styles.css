@@ -3886,6 +3886,10 @@ textarea.form-control.is-invalid {
   visibility: visible;
 }
 
+.invisible {
+  visibility: hidden;
+}
+
 .static {
   position: static;
 }
@@ -3923,6 +3927,34 @@ textarea.form-control.is-invalid {
   left: 0px;
 }
 
+.-bottom-1 {
+  bottom: -0.25rem;
+}
+
+.left-1\/2 {
+  left: 50%;
+}
+
+.right-1\/2 {
+  right: 50%;
+}
+
+.-bottom-0 {
+  bottom: -0px;
+}
+
+.bottom-1 {
+  bottom: 0.25rem;
+}
+
+.bottom-0\.5 {
+  bottom: 0.125rem;
+}
+
+.-bottom-0\.5 {
+  bottom: -0.125rem;
+}
+
 .z-30 {
   z-index: 30;
 }
@@ -3937,6 +3969,10 @@ textarea.form-control.is-invalid {
 
 .m-auto {
   margin: auto;
+}
+
+.m-16 {
+  margin: 4rem;
 }
 
 .mx-auto {
@@ -3962,8 +3998,8 @@ textarea.form-control.is-invalid {
   margin-top: 5rem;
 }
 
-.mb-4 {
-  margin-bottom: 1rem;
+.mb-2 {
+  margin-bottom: 0.5rem;
 }
 
 .mt-2 {
@@ -4030,6 +4066,10 @@ textarea.form-control.is-invalid {
   height: 6rem;
 }
 
+.h-2 {
+  height: 0.5rem;
+}
+
 .h-full {
   height: 100%;
 }
@@ -4058,6 +4098,16 @@ textarea.form-control.is-invalid {
 
 .w-24 {
   width: 6rem;
+}
+
+.w-0 {
+  width: 0px;
+}
+
+.w-min {
+  width: -webkit-min-content;
+  width: -moz-min-content;
+  width: min-content;
 }
 
 .max-w-none {
@@ -4150,6 +4200,26 @@ textarea.form-control.is-invalid {
 .bg-blue-900 {
   --tw-bg-opacity: 1;
   background-color: rgb(30 58 138 / var(--tw-bg-opacity));
+}
+
+.bg-red-400 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(248 113 113 / var(--tw-bg-opacity));
+}
+
+.bg-sky-600 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(2 132 199 / var(--tw-bg-opacity));
+}
+
+.bg-sky-300 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(125 211 252 / var(--tw-bg-opacity));
+}
+
+.bg-sky-400 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(56 189 248 / var(--tw-bg-opacity));
 }
 
 .bg-gradient-to-r {
@@ -4339,6 +4409,30 @@ textarea.form-control.is-invalid {
   transition-duration: 150ms;
 }
 
+.duration-300 {
+  transition-duration: 300ms;
+}
+
+.duration-700 {
+  transition-duration: 700ms;
+}
+
+.duration-100 {
+  transition-duration: 100ms;
+}
+
+.duration-200 {
+  transition-duration: 200ms;
+}
+
+.ease-out {
+  transition-timing-function: cubic-bezier(0, 0, 0.2, 1);
+}
+
+.ease-in {
+  transition-timing-function: cubic-bezier(0.4, 0, 1, 1);
+}
+
 .hover\:no-underline:hover {
   -webkit-text-decoration-line: none;
           text-decoration-line: none;
@@ -4357,6 +4451,41 @@ textarea.form-control.is-invalid {
 .focus\:outline-none:focus {
   outline: 2px solid transparent;
   outline-offset: 2px;
+}
+
+.group:hover .group-hover\:visible {
+  visibility: visible;
+}
+
+.group:hover .group-hover\:w-1\/2 {
+  width: 50%;
+}
+
+.group:hover .group-hover\:text-sky-300 {
+  --tw-text-opacity: 1;
+  color: rgb(125 211 252 / var(--tw-text-opacity));
+}
+
+.group:hover .group-hover\:transition-all {
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+}
+
+.group:hover .group-hover\:duration-700 {
+  transition-duration: 700ms;
+}
+
+.group:hover .group-hover\:duration-300 {
+  transition-duration: 300ms;
+}
+
+.group:hover .group-hover\:ease-in {
+  transition-timing-function: cubic-bezier(0.4, 0, 1, 1);
+}
+
+.group:hover .group-hover\:ease-out {
+  transition-timing-function: cubic-bezier(0, 0, 0.2, 1);
 }
 
 @media (min-width: 0px) {
