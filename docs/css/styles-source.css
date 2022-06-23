@@ -6,6 +6,6 @@
     .button {
         @apply mx-auto text-center text-gray-900 font-extrabold cursor-pointer rounded-lg
             bg-gradient-to-b from-teal-100 to-teal-300 drop-shadow-lg shadow-black inline
-            hover:underline hover:scale-110 hover:-rotate-3 transition duration-150;
+            hover:underline hover:scale-110 hover:-rotate-3 transition ring-2 ring-gray-900;
     }
 }
