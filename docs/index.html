@@ -56,6 +56,10 @@
             #navContent.show {
                 margin-top: 0px;
             }
+
+            .text-shadow {
+                text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.9);
+            }
         </style>
     </head>
 
@@ -74,7 +78,7 @@
                         target="_blank"
                     >
                         <img
-                            class="w-14 h-14 drop-shadow-lg shadow-black hover:scale-125 hover:rotate-45 transition"
+                            class="w-14 h-14 drop-shadow-lg shadow-black hover:scale-125 hover:rotate-45 transition ease-in-out duration-200"
                             src="./images/BBBLogo.svg"
                         />
                     </a>
@@ -82,9 +86,9 @@
 
                 <div class="block md:hidden pr-3">
                     <button
+                        id="navToggle"
                         data-mdb-ripple="true"
                         data-mdb-ripple-color="dark"
-                        id="navToggle"
                         class="button px-5 py-3"
                     >
                         <svg
@@ -110,9 +114,9 @@
                             class="w-fit bs:mx-auto md:mx-0 bs:my-2.5 md:my-0 md:mr-4"
                         >
                             <button
+                                id="game"
                                 data-mdb-ripple="true"
                                 data-mdb-ripple-color="dark"
-                                id="game"
                                 class="button bs:py-1 md:py-1.5 px-4"
                             >
                                 Game
@@ -122,9 +126,9 @@
                             class="w-fit bs:mx-auto md:mx-0 bs:my-2.5 md:my-0 md:mr-4"
                         >
                             <button
+                                id="download"
                                 data-mdb-ripple="true"
                                 data-mdb-ripple-color="dark"
-                                id="download"
                                 class="button bs:py-1 md:py-1.5 px-4"
                             >
                                 Download
@@ -134,9 +138,9 @@
                             class="w-fit bs:mx-auto md:mx-0 bs:my-2.5 md:my-0 md:mr-4"
                         >
                             <button
+                                id="community"
                                 data-mdb-ripple="true"
                                 data-mdb-ripple-color="dark"
-                                id="community"
                                 class="button bs:py-1 md:py-1.5 px-4"
                             >
                                 Community
@@ -146,9 +150,9 @@
                             class="w-fit bs:mx-auto md:mx-0 bs:my-2.5 md:my-0 md:mr-4"
                         >
                             <button
+                                id="supportProject"
                                 data-mdb-ripple="true"
                                 data-mdb-ripple-color="dark"
-                                id="supportProject"
                                 class="button bs:py-1 md:py-1.5 px-4"
                             >
                                 Support Project
@@ -181,12 +185,12 @@
             >
                 <h1
                     id="BBBTitleText"
-                    class="bs:text-xl xxs:text-2xl xs:text-3xl sm:text-4xl md:text-5xl lg:text-6xl xs:mt-4 sm:mt-8 md:mt-14 lg:mt-20 bs:mb-0.5 xs:mb-1 sm:mb-2 md:mb-3 lg:mb-4 font-black text-transparent bg-clip-text bg-gradient-to-b from-yellow-400 to-orange-500 tracking-widest tracking-wide drop-shadow-lg flex-inline"
+                    class="bs:text-xl xxs:text-2xl xs:text-3xl sm:text-4xl md:text-5xl lg:text-6xl xs:mt-4 sm:mt-8 md:mt-14 lg:mt-20 bs:mb-0.5 xs:mb-1 sm:mb-2 md:mb-3 lg:mb-4 font-black text-transparent bg-clip-text bg-gradient-to-b from-yellow-400 to-orange-500 tracking-widest tracking-wide drop-shadow-lg shadow-black flex-inline"
                 >
                     Bubble Blaster Battles
                 </h1>
                 <p
-                    class="bs:text-base xxs:text-lg xs:text-xl md:text-2xl lg:text-3xl text-gray-200 tracking-wide drop-shadow-lg inline"
+                    class="bs:text-base xxs:text-lg xs:text-xl md:text-2xl lg:text-3xl text-gray-200 tracking-wide drop-shadow-lg shadow-black text-shadow inline"
                 >
                     Dive into the endless Ocean and build your own bubble tank
                     to fight hundreds of enemies and explore expansive biomes!
@@ -195,13 +199,14 @@
                     class="h-96 bs:mt-28 bs:-mb-48 xxs:mt-30 xxs:-mb-20 xs:mt-36 xs:mb-0 sm:mt-40 sm:mb-10 md:mt-48 md:mb-28 lg:mt-60 lg:mb-24 xl:mt-72 xl:mb-16 2xl:mt-80 2xl:pt-2 2xl:mb-6"
                 >
                     <img
-                        src="./images/BubbleTankBattle.png"
                         id="bubble-tank-battle"
+                        src="./images/BubbleTankBattle.png"
+                        alt="Bubble Tank Battle"
                         class="mx-auto relative drop-shadow-lg shadow-black z-10"
                     />
                 </div>
                 <p
-                    class="bs:text-base xxs:text-lg xs:text-xl md:text-2xl lg:text-3xl text-gray-200 tracking-wide drop-shadow-lg inline"
+                    class="bs:text-base xxs:text-lg xs:text-xl md:text-2xl lg:text-3xl text-gray-200 tracking-wide drop-shadow-lg shadow-black text-shadow inline"
                 >
                     Design your bubble tank to fit your playstyle and pilot it
                     to slay bosses and hordes, unlock more weapons to expand
@@ -480,11 +485,15 @@
         <!--Footer-->
         <footer class="w-full bg-blue-900 mt-16 overflow-clip">
             <div
-                class="w-fit mx-auto mt-5 mb-7 flex flex-col sm:flex-row text-gray-200"
+                class="w-fit mx-auto mt-5 mb-7 flex flex-col sm:flex-row text-gray-200 text-shadow"
             >
                 <div class="bs:mx-auto sm:ml-auto bs:mb-7 sm:mb-0 px-10">
                     <div class="w-fit ml-auto">
-                        <img src="./images/MoonfriesLogoNoText.png" />
+                        <img
+                            src="./images/MoonfriesLogoNoText.png"
+                            alt="Moonfries Logo"
+                            class="drop-shadow-lg shadow-black hover:-rotate-45 transition ease-in-out duration-700"
+                        />
                         <p class="inline">Made by Moonfries</p>
                     </div>
                 </div>
