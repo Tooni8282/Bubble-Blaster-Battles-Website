@@ -3949,7 +3949,11 @@ textarea.form-control.is-invalid {
   --tw-gradient-from: #ccfbf1;
   --tw-gradient-to: rgb(204 251 241 / 0);
   --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
-  --tw-gradient-to: #2dd4bf;
+  --tw-gradient-to: rgb(45 212 191 / 0);
+  --tw-gradient-stops: var(--tw-gradient-from), #2dd4bf, var(--tw-gradient-to);
+  --tw-gradient-to: #10b981;
+  background-size: 200% 200%;
+  background-position: 0% 0%;
   text-align: center;
   font-weight: 800;
   --tw-text-opacity: 1;
@@ -3975,10 +3979,7 @@ textarea.form-control.is-invalid {
     --tw-scale-x: 1.1;
     --tw-scale-y: 1.1;
     transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
-    --tw-gradient-from: #99f6e4;
-    --tw-gradient-to: rgb(153 246 228 / 0);
-    --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
-    --tw-gradient-to: #14b8a6;
+    background-position: 100% 100%;
     -webkit-text-decoration-line: underline;
             text-decoration-line: underline;
   }
@@ -4048,14 +4049,6 @@ textarea.form-control.is-invalid {
   z-index: 10;
 }
 
-.z-20 {
-  z-index: 20;
-}
-
-.-z-20 {
-  z-index: -20;
-}
-
 .float-left {
   float: left;
 }
@@ -4091,10 +4084,6 @@ textarea.form-control.is-invalid {
   margin-bottom: 0.5rem;
 }
 
-.mt-2 {
-  margin-top: 0.5rem;
-}
-
 .mt-16 {
   margin-top: 4rem;
 }
@@ -4109,6 +4098,10 @@ textarea.form-control.is-invalid {
 
 .ml-auto {
   margin-left: auto;
+}
+
+.mt-2 {
+  margin-top: 0.5rem;
 }
 
 .block {
@@ -4355,6 +4348,10 @@ textarea.form-control.is-invalid {
   padding: 0px;
 }
 
+.p-2 {
+  padding: 0.5rem;
+}
+
 .px-2 {
   padding-left: 0.5rem;
   padding-right: 0.5rem;
@@ -4496,8 +4493,8 @@ textarea.form-control.is-invalid {
   transition-duration: 700ms;
 }
 
-.duration-200 {
-  transition-duration: 200ms;
+.duration-150 {
+  transition-duration: 150ms;
 }
 
 .ease-in-out {
@@ -4505,8 +4502,8 @@ textarea.form-control.is-invalid {
 }
 
 @media (hover: hover) and (pointer: fine) {
-  .hover\:rotate-45:hover {
-    --tw-rotate: 45deg;
+  .hover\:-rotate-12:hover {
+    --tw-rotate: -12deg;
     transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
   }
 
@@ -4515,9 +4512,9 @@ textarea.form-control.is-invalid {
     transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
   }
 
-  .hover\:scale-125:hover {
-    --tw-scale-x: 1.25;
-    --tw-scale-y: 1.25;
+  .hover\:scale-110:hover {
+    --tw-scale-x: 1.1;
+    --tw-scale-y: 1.1;
     transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
   }
 
@@ -4727,8 +4724,8 @@ textarea.form-control.is-invalid {
     margin-bottom: 0.25rem;
   }
 
-  .xxs\:h-8 {
-    height: 2rem;
+  .xxs\:h-12 {
+    height: 3rem;
   }
 
   .xxs\:px-6 {
@@ -4787,8 +4784,8 @@ textarea.form-control.is-invalid {
     margin-bottom: 0.5rem;
   }
 
-  .xs\:h-9 {
-    height: 2.25rem;
+  .xs\:h-14 {
+    height: 3.5rem;
   }
 
   .xs\:max-w-none {
@@ -4893,8 +4890,8 @@ textarea.form-control.is-invalid {
     margin-top: -1.75rem;
   }
 
-  .sm\:h-11 {
-    height: 2.75rem;
+  .sm\:h-16 {
+    height: 4rem;
   }
 
   .sm\:flex-row {
@@ -4973,8 +4970,8 @@ textarea.form-control.is-invalid {
     display: none;
   }
 
-  .md\:h-16 {
-    height: 4rem;
+  .md\:h-20 {
+    height: 5rem;
   }
 
   .md\:w-auto {

@@ -57,6 +57,14 @@
                 margin-top: 0px;
             }
 
+            .text-outline {
+                -webkit-text-stroke: 6px;
+                -webkit-text-fill-color: #1c1c1c;
+            }
+            .small-text-outline {
+                -webkit-text-stroke: 3px;
+                -webkit-text-fill-color: #1c1c1c;
+            }
             .text-shadow {
                 text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.9);
             }
@@ -78,7 +86,7 @@
                         target="_blank"
                     >
                         <img
-                            class="w-14 h-14 drop-shadow-lg shadow-black hover:scale-125 hover:rotate-45 transition ease-in-out duration-200"
+                            class="w-14 h-14 drop-shadow-lg shadow-black hover:scale-110 hover:-rotate-12 transition ease-in-out"
                             src="./images/BBBLogo.svg"
                         />
                     </a>
@@ -185,7 +193,7 @@
             >
                 <h1
                     id="BBBTitleText"
-                    class="bs:text-xl xxs:text-2xl xs:text-3xl sm:text-4xl md:text-5xl lg:text-6xl xs:mt-4 sm:mt-8 md:mt-14 lg:mt-20 bs:mb-0.5 xs:mb-1 sm:mb-2 md:mb-3 lg:mb-4 font-black text-transparent bg-clip-text bg-gradient-to-b from-yellow-400 to-orange-500 tracking-widest tracking-wide drop-shadow-lg shadow-black flex-inline"
+                    class="bs:text-xl xxs:text-2xl xs:text-3xl sm:text-4xl md:text-5xl lg:text-6xl xs:mt-4 sm:mt-8 md:mt-14 lg:mt-20 bs:mb-0.5 xs:mb-1 sm:mb-2 md:mb-3 lg:mb-4 font-black text-transparent bg-clip-text bg-gradient-to-b from-yellow-400 to-orange-500 tracking-widest tracking-wide drop-shadow-lg shadow-black text-outline flex-inline"
                 >
                     Bubble Blaster Battles
                 </h1>
@@ -349,135 +357,131 @@
                 </button>
             </div>
 
-            <!-- Download -->
             <div
-                class="text-center bg-no-repeat bg-cover bs:px-4 xs:px-5 sm:px-7 md:px-9 bs:my-0.5 xxs:my-1.5 xs:my-2.5 sm:my-9 md:my-18 lg:my-24"
+                class="text-center bs:px-4 xs:px-5 sm:px-7 md:px-9 bs:my-0.5 xxs:my-1.5 xs:my-2.5 sm:my-9 md:my-18 lg:my-24"
             >
+                <!-- Download -->
                 <div
                     id="steam"
                     class="max-w-2xl mx-auto bs:my-12 xxs:my-16 xs:my-20 sm:my-28 md:my-32 lg:my-36"
                 >
                     <p
-                        class="bs:h-fit xxs:h-8 xs:h-9 sm:h-11 md:h-16 bs:text-xl xxs:text-2xl xs:text-3xl sm:text-4xl md:text-5xl font-extrabold text-transparent bg-clip-text bg-gradient-to-b from-teal-100 to-teal-400 tracking-wide drop-shadow-lg shadow-black inline-block"
+                        class="p-2 bs:h-fit xxs:h-12 xs:h-14 sm:h-16 md:h-20 bs:text-xl xxs:text-2xl xs:text-3xl sm:text-4xl md:text-5xl font-extrabold text-transparent bg-clip-text bg-gradient-to-b from-teal-100 to-teal-400 tracking-wide drop-shadow-lg shadow-black small-text-outline sm:text-outline inline-block"
                     >
                         Start your adventure!
                     </p>
-                    <div class="mt-2">
-                        <a
-                            href="https://www.youtube.com/watch?v=dQw4w9WgXcQ"
-                            target="_blank"
-                            class="button flex flex-auto max-w-fit items-center bs:pl-5 xs:pl-2 ring"
-                            data-mdb-ripple="true"
-                            data-mdb-ripple-color="dark"
+                    <a
+                        href="https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+                        target="_blank"
+                        class="button flex flex-auto max-w-fit items-center bs:pl-5 xs:pl-2 ring"
+                        data-mdb-ripple="true"
+                        data-mdb-ripple-color="dark"
+                    >
+                        <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 64 64"
+                            xmlns:xlink="http://www.w3.org/1999/xlink"
+                            class="w-24 h-24 py-3"
                         >
-                            <svg
-                                xmlns="http://www.w3.org/2000/svg"
-                                viewBox="0 0 64 64"
-                                xmlns:xlink="http://www.w3.org/1999/xlink"
-                                class="w-24 h-24 py-3"
-                            >
-                                <path
-                                    data-name="layer1"
-                                    d="M31.945 0A32.028 32.028 0 0 0 0 29.433l17.181 7.091a9.021 9.021 0 0 1 5.106-1.574q.256 0 .505.014l7.642-11.057v-.155a12.088 12.088 0 1 1 12.088 12.07h-.275l-10.9 7.76c.007.144.012.288.012.429a9.075 9.075 0 0 1-17.97 1.786L1.1 40.72A32.047 32.047 0 1 0 31.945 0z"
-                                    fill="#202020"
-                                ></path>
-                                <path
-                                    data-name="layer1"
-                                    d="M20.088 48.555l-3.937-1.625a6.8 6.8 0 1 0 3.725-9.293l4.069 1.679a5.005 5.005 0 1 1-3.857 9.238zm30.489-24.803a8.055 8.055 0 1 0-8.054 8.04 8.059 8.059 0 0 0 8.054-8.04zm-14.093-.013a6.051 6.051 0 1 1 6.05 6.039 6.045 6.045 0 0 1-6.049-6.04z"
-                                    fill="#202020"
-                                ></path>
-                            </svg>
-                            <p
-                                class="bs:max-w-fit xs:max-w-none bs:pl-3 xs:pl-1 pr-5 bs:text-2xl xs:text-3xl inline"
-                            >
-                                Get it on Steam
-                            </p>
-                        </a>
-                    </div>
+                            <path
+                                data-name="layer1"
+                                d="M31.945 0A32.028 32.028 0 0 0 0 29.433l17.181 7.091a9.021 9.021 0 0 1 5.106-1.574q.256 0 .505.014l7.642-11.057v-.155a12.088 12.088 0 1 1 12.088 12.07h-.275l-10.9 7.76c.007.144.012.288.012.429a9.075 9.075 0 0 1-17.97 1.786L1.1 40.72A32.047 32.047 0 1 0 31.945 0z"
+                                fill="#202020"
+                            ></path>
+                            <path
+                                data-name="layer1"
+                                d="M20.088 48.555l-3.937-1.625a6.8 6.8 0 1 0 3.725-9.293l4.069 1.679a5.005 5.005 0 1 1-3.857 9.238zm30.489-24.803a8.055 8.055 0 1 0-8.054 8.04 8.059 8.059 0 0 0 8.054-8.04zm-14.093-.013a6.051 6.051 0 1 1 6.05 6.039 6.045 6.045 0 0 1-6.049-6.04z"
+                                fill="#202020"
+                            ></path>
+                        </svg>
+                        <p
+                            class="bs:max-w-fit xs:max-w-none bs:pl-3 xs:pl-1 pr-5 bs:text-2xl xs:text-3xl inline"
+                        >
+                            Get it on Steam
+                        </p>
+                    </a>
                 </div>
 
+                <!-- Community -->
                 <div
                     id="discord"
                     class="max-w-2xl mx-auto bs:my-12 xxs:my-16 xs:my-20 sm:my-28 md:my-32 lg:my-36"
                 >
                     <p
-                        class="bs:h-fit xxs:h-8 xs:h-9 sm:h-11 md:h-16 bs:text-xl xxs:text-2xl xs:text-3xl sm:text-4xl md:text-5xl font-extrabold text-transparent bg-clip-text bg-gradient-to-b from-teal-100 to-teal-400 tracking-wide drop-shadow-lg shadow-black inline-block"
+                        class="p-2 bs:h-fit xxs:h-12 xs:h-14 sm:h-16 md:h-20 bs:text-xl xxs:text-2xl xs:text-3xl sm:text-4xl md:text-5xl font-extrabold text-transparent bg-clip-text bg-gradient-to-b from-teal-100 to-teal-400 tracking-wide drop-shadow-lg shadow-black text-outline inline-block"
                     >
                         Chat with the community
                     </p>
-                    <div class="mt-2">
-                        <a
-                            href="https://discord.gg/5V88S5e5wC"
-                            target="_blank"
-                            class="button flex flex-auto max-w-fit items-center bs:pl-5 xs:pl-4 ring"
-                            data-mdb-ripple="true"
-                            data-mdb-ripple-color="dark"
+                    <a
+                        href="https://discord.gg/5V88S5e5wC"
+                        target="_blank"
+                        class="button flex flex-auto max-w-fit items-center bs:pl-5 xs:pl-4 ring"
+                        data-mdb-ripple="true"
+                        data-mdb-ripple-color="dark"
+                    >
+                        <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 640 512"
+                            style="color: #202020"
+                            class="w-24 h-24 py-2"
                         >
-                            <svg
-                                xmlns="http://www.w3.org/2000/svg"
-                                viewBox="0 0 640 512"
-                                style="color: #202020"
-                                class="w-24 h-24 py-2"
-                            >
-                                <!--! Font Awesome Pro 6.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. -->
-                                <path
-                                    fill="currentColor"
-                                    d="M524.531,69.836a1.5,1.5,0,0,0-.764-.7A485.065,485.065,0,0,0,404.081,32.03a1.816,1.816,0,0,0-1.923.91,337.461,337.461,0,0,0-14.9,30.6,447.848,447.848,0,0,0-134.426,0,309.541,309.541,0,0,0-15.135-30.6,1.89,1.89,0,0,0-1.924-.91A483.689,483.689,0,0,0,116.085,69.137a1.712,1.712,0,0,0-.788.676C39.068,183.651,18.186,294.69,28.43,404.354a2.016,2.016,0,0,0,.765,1.375A487.666,487.666,0,0,0,176.02,479.918a1.9,1.9,0,0,0,2.063-.676A348.2,348.2,0,0,0,208.12,430.4a1.86,1.86,0,0,0-1.019-2.588,321.173,321.173,0,0,1-45.868-21.853,1.885,1.885,0,0,1-.185-3.126c3.082-2.309,6.166-4.711,9.109-7.137a1.819,1.819,0,0,1,1.9-.256c96.229,43.917,200.41,43.917,295.5,0a1.812,1.812,0,0,1,1.924.233c2.944,2.426,6.027,4.851,9.132,7.16a1.884,1.884,0,0,1-.162,3.126,301.407,301.407,0,0,1-45.89,21.83,1.875,1.875,0,0,0-1,2.611,391.055,391.055,0,0,0,30.014,48.815,1.864,1.864,0,0,0,2.063.7A486.048,486.048,0,0,0,610.7,405.729a1.882,1.882,0,0,0,.765-1.352C623.729,277.594,590.933,167.465,524.531,69.836ZM222.491,337.58c-28.972,0-52.844-26.587-52.844-59.239S193.056,219.1,222.491,219.1c29.665,0,53.306,26.82,52.843,59.239C275.334,310.993,251.924,337.58,222.491,337.58Zm195.38,0c-28.971,0-52.843-26.587-52.843-59.239S388.437,219.1,417.871,219.1c29.667,0,53.307,26.82,52.844,59.239C470.715,310.993,447.538,337.58,417.871,337.58Z"
-                                />
-                            </svg>
-                            <p
-                                class="bs:max-w-fit xs:max-w-none bs:pl-1 xs:pl-3 bs:pr-4 xs:pr-6 bs:text-2xl xs:text-3xl inline"
-                            >
-                                Join the Discord
-                            </p>
-                        </a>
-                    </div>
+                            <!--! Font Awesome Pro 6.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. -->
+                            <path
+                                fill="currentColor"
+                                d="M524.531,69.836a1.5,1.5,0,0,0-.764-.7A485.065,485.065,0,0,0,404.081,32.03a1.816,1.816,0,0,0-1.923.91,337.461,337.461,0,0,0-14.9,30.6,447.848,447.848,0,0,0-134.426,0,309.541,309.541,0,0,0-15.135-30.6,1.89,1.89,0,0,0-1.924-.91A483.689,483.689,0,0,0,116.085,69.137a1.712,1.712,0,0,0-.788.676C39.068,183.651,18.186,294.69,28.43,404.354a2.016,2.016,0,0,0,.765,1.375A487.666,487.666,0,0,0,176.02,479.918a1.9,1.9,0,0,0,2.063-.676A348.2,348.2,0,0,0,208.12,430.4a1.86,1.86,0,0,0-1.019-2.588,321.173,321.173,0,0,1-45.868-21.853,1.885,1.885,0,0,1-.185-3.126c3.082-2.309,6.166-4.711,9.109-7.137a1.819,1.819,0,0,1,1.9-.256c96.229,43.917,200.41,43.917,295.5,0a1.812,1.812,0,0,1,1.924.233c2.944,2.426,6.027,4.851,9.132,7.16a1.884,1.884,0,0,1-.162,3.126,301.407,301.407,0,0,1-45.89,21.83,1.875,1.875,0,0,0-1,2.611,391.055,391.055,0,0,0,30.014,48.815,1.864,1.864,0,0,0,2.063.7A486.048,486.048,0,0,0,610.7,405.729a1.882,1.882,0,0,0,.765-1.352C623.729,277.594,590.933,167.465,524.531,69.836ZM222.491,337.58c-28.972,0-52.844-26.587-52.844-59.239S193.056,219.1,222.491,219.1c29.665,0,53.306,26.82,52.843,59.239C275.334,310.993,251.924,337.58,222.491,337.58Zm195.38,0c-28.971,0-52.843-26.587-52.843-59.239S388.437,219.1,417.871,219.1c29.667,0,53.307,26.82,52.844,59.239C470.715,310.993,447.538,337.58,417.871,337.58Z"
+                            />
+                        </svg>
+                        <p
+                            class="bs:max-w-fit xs:max-w-none bs:pl-1 xs:pl-3 bs:pr-4 xs:pr-6 bs:text-2xl xs:text-3xl inline"
+                        >
+                            Join the Discord
+                        </p>
+                    </a>
                 </div>
 
+                <!-- Support Project -->
                 <div
                     id="patreon"
                     class="max-w-2xl mx-auto bs:my-12 xxs:my-16 xs:my-20 sm:my-28 md:my-32 lg:my-36"
                 >
                     <p
-                        class="bs:h-fit xxs:h-8 xs:h-9 sm:h-11 md:h-16 bs:text-xl xxs:text-2xl xs:text-3xl sm:text-4xl md:text-5xl font-extrabold text-transparent bg-clip-text bg-gradient-to-b from-teal-100 to-teal-400 tracking-wide drop-shadow-lg shadow-black inline-block"
+                        class="p-2 bs:h-fit xxs:h-12 xs:h-14 sm:h-16 md:h-20 bs:text-xl xxs:text-2xl xs:text-3xl sm:text-4xl md:text-5xl font-extrabold text-transparent bg-clip-text bg-gradient-to-b from-teal-100 to-teal-400 tracking-wide drop-shadow-lg shadow-black text-outline inline-block"
                     >
                         Support my mission
                     </p>
-                    <div class="mt-2">
-                        <a
-                            href="https://www.youtube.com/watch?v=dQw4w9WgXcQ"
-                            target="_blank"
-                            class="button flex flex-auto max-w-fit items-center bs:pl-5 xs:pl-2.5 ring"
-                            data-mdb-ripple="true"
-                            data-mdb-ripple-color="dark"
+                    <a
+                        href="https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+                        target="_blank"
+                        class="button flex flex-auto max-w-fit items-center bs:pl-5 xs:pl-2.5 ring"
+                        data-mdb-ripple="true"
+                        data-mdb-ripple-color="dark"
+                    >
+                        <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            xmlns:xlink="http://www.w3.org/1999/xlink"
+                            viewBox="0 0 567.2 545.8"
+                            class="w-24 h-24 py-3"
                         >
-                            <svg
-                                xmlns="http://www.w3.org/2000/svg"
-                                xmlns:xlink="http://www.w3.org/1999/xlink"
-                                viewBox="0 0 567.2 545.8"
-                                class="w-24 h-24 py-3"
-                            >
-                                <g>
-                                    <circle
-                                        fill="#202020"
-                                        cx="362.6"
-                                        cy="204.6"
-                                        r="204.6"
-                                    />
-                                    <rect
-                                        fill="#202020"
-                                        width="100"
-                                        height="545.8"
-                                    />
-                                </g>
-                            </svg>
-                            <p
-                                class="bs:max-w-fit xs:max-w-none bs:pl-3 xs:pl-1 pr-5 bs:text-2xl xs:text-3xl inline"
-                            >
-                                Support on Patreon
-                            </p>
-                        </a>
-                    </div>
+                            <g>
+                                <circle
+                                    fill="#202020"
+                                    cx="362.6"
+                                    cy="204.6"
+                                    r="204.6"
+                                />
+                                <rect
+                                    fill="#202020"
+                                    width="100"
+                                    height="545.8"
+                                />
+                            </g>
+                        </svg>
+                        <p
+                            class="bs:max-w-fit xs:max-w-none bs:pl-3 xs:pl-1 pr-5 bs:text-2xl xs:text-3xl inline"
+                        >
+                            Support on Patreon
+                        </p>
+                    </a>
                 </div>
             </div>
         </div>
@@ -510,14 +514,14 @@
                         <a href="mailto:contact@bubbleblasterbattles.com">
                             <p class="relative group mt-2">
                                 <span
-                                    class="bs:text-base xxs:text-lg xs:text-2xl sm:text-xl md:text-2xl group-hover:text-sky-300 group-hover:duration-300 duration-200"
+                                    class="bs:text-base xxs:text-lg xs:text-2xl sm:text-xl md:text-2xl group-hover:text-sky-300 group-hover:duration-300"
                                     >contact@bubbleblasterbattles.com
                                 </span>
                                 <span
-                                    class="absolute w-0 h-1 bg-gray-200 bottom-0 left-1/2 rounded-r-full group-hover:bg-sky-300 group-hover:w-1/2 group-hover:transition-all group-hover:ease-out group-hover:duration-300 duration-200"
+                                    class="absolute w-0 h-1 bg-gray-200 bottom-0 left-1/2 rounded-r-full group-hover:bg-sky-300 group-hover:w-1/2 group-hover:transition-all group-hover:ease-out duration-150"
                                 ></span>
                                 <span
-                                    class="absolute w-0 h-1 bg-gray-200 bottom-0 right-1/2 rounded-l-full group-hover:bg-sky-300 group-hover:w-1/2 group-hover:transition-all group-hover:ease-out group-hover:duration-300 duration-200"
+                                    class="absolute w-0 h-1 bg-gray-200 bottom-0 right-1/2 rounded-l-full group-hover:bg-sky-300 group-hover:w-1/2 group-hover:transition-all group-hover:ease-out duration-150"
                                 ></span>
                             </p>
                         </a>
