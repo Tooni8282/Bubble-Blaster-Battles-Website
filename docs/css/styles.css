@@ -3992,6 +3992,13 @@ textarea.form-control.is-invalid {
   outline-offset: 2px;
 }
 
+.shade {
+  --tw-shadow-color: #000;
+  --tw-shadow: var(--tw-shadow-colored);
+  --tw-drop-shadow: drop-shadow(0 10px 8px rgb(0 0 0 / 0.04)) drop-shadow(0 4px 3px rgb(0 0 0 / 0.1));
+  filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
+}
+
 .visible {
   visibility: visible;
 }
@@ -4065,6 +4072,11 @@ textarea.form-control.is-invalid {
 .my-3 {
   margin-top: 0.75rem;
   margin-bottom: 0.75rem;
+}
+
+.my-20 {
+  margin-top: 5rem;
+  margin-bottom: 5rem;
 }
 
 .-my-2 {
@@ -4204,10 +4216,6 @@ textarea.form-control.is-invalid {
   flex: 1 1 auto;
 }
 
-.flex-grow {
-  flex-grow: 1;
-}
-
 .transform {
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
@@ -4340,10 +4348,6 @@ textarea.form-control.is-invalid {
   background-repeat: no-repeat;
 }
 
-.fill-current {
-  fill: currentColor;
-}
-
 .p-0 {
   padding: 0px;
 }
@@ -4452,11 +4456,6 @@ textarea.form-control.is-invalid {
   color: rgb(29 78 216 / var(--tw-text-opacity));
 }
 
-.shadow-black {
-  --tw-shadow-color: #000;
-  --tw-shadow: var(--tw-shadow-colored);
-}
-
 .outline {
   outline-style: solid;
 }
@@ -4469,11 +4468,6 @@ textarea.form-control.is-invalid {
 
 .blur {
   --tw-blur: blur(8px);
-  filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
-}
-
-.drop-shadow-lg {
-  --tw-drop-shadow: drop-shadow(0 10px 8px rgb(0 0 0 / 0.04)) drop-shadow(0 4px 3px rgb(0 0 0 / 0.1));
   filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
 }
 
@@ -4570,11 +4564,6 @@ textarea.form-control.is-invalid {
 }
 
 @media (min-width: 0px) {
-  .bs\:my-2 {
-    margin-top: 0.5rem;
-    margin-bottom: 0.5rem;
-  }
-
   .bs\:mx-auto {
     margin-left: auto;
     margin-right: auto;
@@ -4583,6 +4572,11 @@ textarea.form-control.is-invalid {
   .bs\:my-2\.5 {
     margin-top: 0.625rem;
     margin-bottom: 0.625rem;
+  }
+
+  .bs\:my-2 {
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
   }
 
   .bs\:my-0\.5 {
@@ -4632,6 +4626,10 @@ textarea.form-control.is-invalid {
     height: -webkit-fit-content;
     height: -moz-fit-content;
     height: fit-content;
+  }
+
+  .bs\:w-full {
+    width: 100%;
   }
 
   .bs\:max-w-fit {

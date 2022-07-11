@@ -16,7 +16,7 @@
         <meta name="author" content="Tooni" />
 
         <!-- Website Favicon -->
-        <link rel="icon" href="./images/BBBLogo.svg" />
+        <link rel="icon" href="./images/BBBLogo.png" />
 
         <!-- Tailwind CSS Stylesheets -->
         <link rel="stylesheet" href="./css/styles.css" />
@@ -61,10 +61,6 @@
                 -webkit-text-stroke: 6px;
                 -webkit-text-fill-color: #1c1c1c;
             }
-            .small-text-outline {
-                -webkit-text-stroke: 3px;
-                -webkit-text-fill-color: #1c1c1c;
-            }
             .text-shadow {
                 text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.9);
             }
@@ -75,24 +71,26 @@
         <!-- Nav -->
         <nav
             id="header"
-            class="w-full fixed top-0 bg-gradient-to-r from-blue-800 to-blue-500 z-30 drop-shadow-lg shadow-black"
+            class="w-full fixed top-0 z-30 shade bg-gradient-to-r from-blue-800 to-blue-500"
         >
             <div
-                class="mx-auto my-3 px-2 flex flex-wrap items-center justify-between"
+                class="mx-auto px-2 my-3 flex flex-wrap items-center justify-between"
             >
+                <!-- Top Left Logo -->
                 <div class="pl-3">
                     <a
-                        href="https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+                        href="https://store.steampowered.com/app/2073340/Bubble_Blaster_Battles/"
                         target="_blank"
                     >
                         <img
-                            class="w-14 h-14 drop-shadow-lg shadow-black hover:scale-110 hover:-rotate-12 transition ease-in-out"
-                            src="./images/BBBLogo.svg"
+                            class="w-14 h-14 shade hover:scale-110 hover:-rotate-12 transition ease-in-out"
+                            src="./images/BBBLogo.png"
                         />
                     </a>
                 </div>
 
-                <div class="block md:hidden pr-3">
+                <!-- Narrow Screen Nav Toggle -->
+                <div class="bs:block md:hidden pr-3">
                     <button
                         id="navToggle"
                         data-mdb-ripple="true"
@@ -100,7 +98,7 @@
                         class="button px-5 py-3"
                     >
                         <svg
-                            class="fill-current w-4 h-4"
+                            class="w-4 h-4"
                             viewBox="0 0 20 20"
                             xmlns="http://www.w3.org/2000/svg"
                         >
@@ -111,13 +109,12 @@
                     </button>
                 </div>
 
+                <!-- Nav Content -->
                 <div
                     id="navContent"
-                    class="w-full -mt-80 block flex-grow md:flex md:w-auto bs:my-2 md:my-0 text-lg"
+                    class="bs:w-full md:w-auto -mt-80 bs:my-2 md:my-0 text-lg"
                 >
-                    <ul
-                        class="list-reset flex-1 md:flex justify-end items-center"
-                    >
+                    <ul class="md:flex justify-end items-center">
                         <li
                             class="w-fit bs:mx-auto md:mx-0 bs:my-2.5 md:my-0 md:mr-4"
                         >
@@ -193,12 +190,12 @@
             >
                 <h1
                     id="BBBTitleText"
-                    class="bs:text-xl xxs:text-2xl xs:text-3xl sm:text-4xl md:text-5xl lg:text-6xl xs:mt-4 sm:mt-8 md:mt-14 lg:mt-20 bs:mb-0.5 xs:mb-1 sm:mb-2 md:mb-3 lg:mb-4 font-black text-transparent bg-clip-text bg-gradient-to-b from-yellow-400 to-orange-500 tracking-widest tracking-wide drop-shadow-lg shadow-black text-outline flex-inline"
+                    class="bs:text-xl xxs:text-2xl xs:text-3xl sm:text-4xl md:text-5xl lg:text-6xl xs:mt-4 sm:mt-8 md:mt-14 lg:mt-20 bs:mb-0.5 xs:mb-1 sm:mb-2 md:mb-3 lg:mb-4 font-black text-transparent bg-clip-text bg-gradient-to-b from-yellow-400 to-orange-500 tracking-widest tracking-wide shade text-outline flex-inline"
                 >
                     Bubble Blaster Battles
                 </h1>
                 <p
-                    class="bs:text-base xxs:text-lg xs:text-xl md:text-2xl lg:text-3xl text-gray-200 tracking-wide drop-shadow-lg shadow-black text-shadow inline"
+                    class="bs:text-base xxs:text-lg xs:text-xl md:text-2xl lg:text-3xl text-gray-200 tracking-wide shade text-shadow inline"
                 >
                     Dive into the endless Ocean and build your own bubble tank
                     to fight hundreds of enemies and explore expansive biomes!
@@ -210,11 +207,11 @@
                         id="bubble-tank-battle"
                         src="./images/BubbleTankBattle.png"
                         alt="Bubble Tank Battle"
-                        class="mx-auto relative drop-shadow-lg shadow-black z-10"
+                        class="mx-auto relative shade z-10"
                     />
                 </div>
                 <p
-                    class="bs:text-base xxs:text-lg xs:text-xl md:text-2xl lg:text-3xl text-gray-200 tracking-wide drop-shadow-lg shadow-black text-shadow inline"
+                    class="bs:text-base xxs:text-lg xs:text-xl md:text-2xl lg:text-3xl text-gray-200 tracking-wide shade text-shadow inline"
                 >
                     Design your bubble tank to fit your playstyle and pilot it
                     to slay bosses and hordes, unlock more weapons to expand
@@ -366,12 +363,12 @@
                     class="max-w-2xl mx-auto bs:my-12 xxs:my-16 xs:my-20 sm:my-28 md:my-32 lg:my-36"
                 >
                     <p
-                        class="p-2 bs:h-fit xxs:h-12 xs:h-14 sm:h-16 md:h-20 bs:text-xl xxs:text-2xl xs:text-3xl sm:text-4xl md:text-5xl font-extrabold text-transparent bg-clip-text bg-gradient-to-b from-teal-100 to-teal-400 tracking-wide drop-shadow-lg shadow-black small-text-outline sm:text-outline inline-block"
+                        class="p-2 bs:h-fit xxs:h-12 xs:h-14 sm:h-16 md:h-20 bs:text-xl xxs:text-2xl xs:text-3xl sm:text-4xl md:text-5xl font-extrabold text-transparent bg-clip-text bg-gradient-to-b from-teal-100 to-teal-400 tracking-wide shade text-outline sm:text-outline inline-block"
                     >
                         Start your adventure!
                     </p>
                     <a
-                        href="https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+                        href="https://store.steampowered.com/app/2073340/Bubble_Blaster_Battles/"
                         target="_blank"
                         class="button flex flex-auto max-w-fit items-center bs:pl-5 xs:pl-2 ring"
                         data-mdb-ripple="true"
@@ -408,7 +405,7 @@
                     class="max-w-2xl mx-auto bs:my-12 xxs:my-16 xs:my-20 sm:my-28 md:my-32 lg:my-36"
                 >
                     <p
-                        class="p-2 bs:h-fit xxs:h-12 xs:h-14 sm:h-16 md:h-20 bs:text-xl xxs:text-2xl xs:text-3xl sm:text-4xl md:text-5xl font-extrabold text-transparent bg-clip-text bg-gradient-to-b from-teal-100 to-teal-400 tracking-wide drop-shadow-lg shadow-black text-outline inline-block"
+                        class="p-2 bs:h-fit xxs:h-12 xs:h-14 sm:h-16 md:h-20 bs:text-xl xxs:text-2xl xs:text-3xl sm:text-4xl md:text-5xl font-extrabold text-transparent bg-clip-text bg-gradient-to-b from-teal-100 to-teal-400 tracking-wide shade text-outline inline-block"
                     >
                         Chat with the community
                     </p>
@@ -445,12 +442,12 @@
                     class="max-w-2xl mx-auto bs:my-12 xxs:my-16 xs:my-20 sm:my-28 md:my-32 lg:my-36"
                 >
                     <p
-                        class="p-2 bs:h-fit xxs:h-12 xs:h-14 sm:h-16 md:h-20 bs:text-xl xxs:text-2xl xs:text-3xl sm:text-4xl md:text-5xl font-extrabold text-transparent bg-clip-text bg-gradient-to-b from-teal-100 to-teal-400 tracking-wide drop-shadow-lg shadow-black text-outline inline-block"
+                        class="p-2 bs:h-fit xxs:h-12 xs:h-14 sm:h-16 md:h-20 bs:text-xl xxs:text-2xl xs:text-3xl sm:text-4xl md:text-5xl font-extrabold text-transparent bg-clip-text bg-gradient-to-b from-teal-100 to-teal-400 tracking-wide shade text-outline inline-block"
                     >
                         Support my mission
                     </p>
                     <a
-                        href="https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+                        href="https://www.patreon.com/bubbleblasterbattles"
                         target="_blank"
                         class="button flex flex-auto max-w-fit items-center bs:pl-5 xs:pl-2.5 ring"
                         data-mdb-ripple="true"
@@ -496,7 +493,7 @@
                         <img
                             src="./images/MoonfriesLogoNoText.png"
                             alt="Moonfries Logo"
-                            class="drop-shadow-lg shadow-black hover:-rotate-45 transition ease-in-out duration-700"
+                            class="shade hover:-rotate-45 transition ease-in-out duration-700"
                         />
                         <p class="inline">Made by Moonfries</p>
                     </div>
