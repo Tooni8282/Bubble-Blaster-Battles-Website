@@ -4074,11 +4074,6 @@ textarea.form-control.is-invalid {
   margin-bottom: 0.75rem;
 }
 
-.my-20 {
-  margin-top: 5rem;
-  margin-bottom: 5rem;
-}
-
 .-my-2 {
   margin-top: -0.5rem;
   margin-bottom: -0.5rem;
@@ -4208,10 +4203,6 @@ textarea.form-control.is-invalid {
   max-width: fit-content;
 }
 
-.flex-1 {
-  flex: 1 1 0%;
-}
-
 .flex-auto {
   flex: 1 1 auto;
 }
@@ -4333,10 +4324,6 @@ textarea.form-control.is-invalid {
 
 .to-teal-400 {
   --tw-gradient-to: #2dd4bf;
-}
-
-.bg-cover {
-  background-size: cover;
 }
 
 .bg-clip-text {
@@ -4564,6 +4551,11 @@ textarea.form-control.is-invalid {
 }
 
 @media (min-width: 0px) {
+  .bs\:my-2 {
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+  }
+
   .bs\:mx-auto {
     margin-left: auto;
     margin-right: auto;
@@ -4572,11 +4564,6 @@ textarea.form-control.is-invalid {
   .bs\:my-2\.5 {
     margin-top: 0.625rem;
     margin-bottom: 0.625rem;
-  }
-
-  .bs\:my-2 {
-    margin-top: 0.5rem;
-    margin-bottom: 0.5rem;
   }
 
   .bs\:my-0\.5 {

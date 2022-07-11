@@ -1,10 +1,7 @@
 const { screens } = require("tailwindcss/defaultTheme");
 
 module.exports = {
-    content: [
-        "./docs/*.{html,js}",
-        "./node_modules/tw-elements/dist/js/**/*.js",
-    ],
+    content: ["./docs/*.{html,js}"],
     theme: {
         screens: {
             bs: "0px",
