@@ -1,5 +1,5 @@
 /*
-! tailwindcss v3.1.4 | MIT License | https://tailwindcss.com
+! tailwindcss v3.1.6 | MIT License | https://tailwindcss.com
 */
 
 /*
@@ -1567,6 +1567,25 @@ textarea.form-control.is-invalid {
 
 .offcanvas.show {
   transform: none;
+}
+
+.ratio {
+  position: relative;
+  width: 100%;
+}
+
+.ratio::before {
+  display: block;
+  padding-top: var(--bs-aspect-ratio);
+  content: "";
+}
+
+.ratio > * {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
 }
 
 .sticky-top {
@@ -4195,6 +4214,10 @@ textarea.form-control.is-invalid {
   display: table;
 }
 
+.grid {
+  display: grid;
+}
+
 .hidden {
   display: none;
 }
@@ -4321,6 +4344,10 @@ textarea.form-control.is-invalid {
 
 .border-0 {
   border-width: 0px;
+}
+
+.border {
+  border-width: 1px;
 }
 
 .bg-blue-600 {

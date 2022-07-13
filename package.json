@@ -23,6 +23,7 @@
         "@popperjs/core": "^2.11.5",
         "autoprefixer": "^10.4.7",
         "bubbly-bg": "^1.0.0",
+        "gsap": "^3.10.4",
         "postcss": "^8.4.14",
         "tailwindcss": "^3.1.4",
         "tw-elements": "^1.0.0-alpha12"
