@@ -26,13 +26,13 @@
         />
 
         <!-- Tailwind Elements Package -->
-        <script src="./packages/index.min.js"></script>
+        <script src="./packages/index.min.js" async></script>
 
         <!-- Bubbly Background Package -->
-        <script src="./packages/bubbly-bg.js"></script>
+        <script src="./packages/bubbly-bg.js" async></script>
 
         <!-- GreenSock Animation Package -->
-        <script src="./packages/gsap.min.js"></script>
+        <script src="./packages/gsap.min.js" async></script>
 
         <style>
             /* Import Jua Font */
@@ -631,8 +631,18 @@
                 }
             }
 
-            /* Parallax Scrolling */
+            /* Bubble Tank Battle Floating Animation */
             const bubbleTanks = document.getElementById("bubbleTankBattle");
+
+            //calculate a scale factor for the animation based on the viewport width
+            var widthScaler = window.innerWidth * 0.002;
+            window.addEventListener(
+                "resize",
+                function () {
+                    widthScaler = window.innerWidth * 0.002;
+                },
+                false
+            );
 
             const randomX = random(1, 10);
             const randomY = random(1, 10);
@@ -641,16 +651,38 @@
             const randomTime2 = random(5, 10);
             const randomAngle = random(-10, 10);
 
+            function random(min, max) {
+                const delta = max - min;
+                return (direction = 1) =>
+                    (min + delta * Math.random()) * direction;
+            }
+
+            //initialize floating animation
             gsap.set(bubbleTanks, {
                 x: randomX(-1),
                 y: randomX(1),
                 rotation: randomAngle(-1),
             });
-
             moveX(bubbleTanks, 1);
             moveY(bubbleTanks, -1);
             rotate(bubbleTanks, 1);
 
+            function moveX(target, direction) {
+                gsap.to(target, randomTime(), {
+                    x: randomX(direction) * widthScaler,
+                    ease: Sine.easeInOut,
+                    onComplete: moveX,
+                    onCompleteParams: [target, direction * -1],
+                });
+            }
+            function moveY(target, direction) {
+                gsap.to(target, randomTime(), {
+                    y: randomY(direction) * widthScaler,
+                    ease: Sine.easeInOut,
+                    onComplete: moveY,
+                    onCompleteParams: [target, direction * -1],
+                });
+            }
             function rotate(target, direction) {
                 gsap.to(target, randomTime2(), {
                     rotation: randomAngle(direction),
@@ -658,30 +690,6 @@
                     onComplete: rotate,
                     onCompleteParams: [target, direction * -1],
                 });
-            }
-
-            function moveX(target, direction) {
-                gsap.to(target, randomTime(), {
-                    x: randomX(direction),
-                    ease: Sine.easeInOut,
-                    onComplete: moveX,
-                    onCompleteParams: [target, direction * -1],
-                });
-            }
-
-            function moveY(target, direction) {
-                gsap.to(target, randomTime(), {
-                    y: randomY(direction),
-                    ease: Sine.easeInOut,
-                    onComplete: moveY,
-                    onCompleteParams: [target, direction * -1],
-                });
-            }
-
-            function random(min, max) {
-                const delta = max - min;
-                return (direction = 1) =>
-                    (min + delta * Math.random()) * direction;
             }
         </script>
     </body>
