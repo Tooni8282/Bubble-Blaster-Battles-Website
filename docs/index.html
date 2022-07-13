@@ -70,7 +70,7 @@
         </style>
     </head>
 
-    <body class="bg-blue-600 flex flex-col">
+    <body class="bg-blue-600 flex flex-col overflow-x-clip">
         <!-- Nav -->
         <nav
             id="header"
@@ -196,13 +196,13 @@
                     to fight hundreds of enemies and explore expansive biomes!
                 </p>
                 <div
-                    class="bs:my-5 xxs:my-6 xs:my-8 sm:my-11 md:my-14 lg:my-16 xl:my-20 2xl:my-24"
+                    class="bs:my-5 xxs:my-6 xs:my-8 sm:my-11 md:my-14 lg:my-16"
                 >
                     <img
                         id="bubbleTankBattle"
                         src="./images/BubbleTankBattle.png"
                         alt="Bubble Tank Battle"
-                        class="mx-auto z-10 relative shade"
+                        class="mx-auto z-10"
                     />
                 </div>
                 <p
@@ -438,7 +438,7 @@
         </div>
 
         <!--Footer-->
-        <footer class="w-full mt-16 bg-blue-900 overflow-clip">
+        <footer class="w-full mt-16 bg-blue-900">
             <div
                 class="w-fit mx-auto mt-5 mb-7 flex flex-col sm:flex-row text-gray-200 text-shadow"
             >
@@ -634,16 +634,6 @@
             /* Parallax Scrolling */
             const bubbleTanks = document.getElementById("bubbleTankBattle");
 
-            // window.onload = Parallax();
-            // window.addEventListener("scroll", function () {
-            //     Parallax();
-            // });
-            // function Parallax() {
-            //     let value = window.scrollY;
-
-            //     bubbleTanks.style.top = value * -0.25 + "px";
-            // }
-
             const randomX = random(1, 10);
             const randomY = random(1, 10);
             const randomDelay = random(0, 1);
@@ -664,7 +654,6 @@
             function rotate(target, direction) {
                 gsap.to(target, randomTime2(), {
                     rotation: randomAngle(direction),
-                    // delay: randomDelay(),
                     ease: Sine.easeInOut,
                     onComplete: rotate,
                     onCompleteParams: [target, direction * -1],
