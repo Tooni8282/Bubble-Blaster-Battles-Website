@@ -4157,10 +4157,6 @@ textarea.form-control.is-invalid {
   margin-bottom: 0.75rem;
 }
 
-.-mt-80 {
-  margin-top: -20rem;
-}
-
 .mt-20 {
   margin-top: 5rem;
 }
@@ -4327,10 +4323,6 @@ textarea.form-control.is-invalid {
 
 .overflow-hidden {
   overflow: hidden;
-}
-
-.overflow-clip {
-  overflow: clip;
 }
 
 .overflow-x-clip {
@@ -4567,11 +4559,6 @@ textarea.form-control.is-invalid {
 }
 
 @media (min-width: 0px) {
-  .bs\:my-2 {
-    margin-top: 0.5rem;
-    margin-bottom: 0.5rem;
-  }
-
   .bs\:my-12 {
     margin-top: 3rem;
     margin-bottom: 3rem;
@@ -4585,6 +4572,10 @@ textarea.form-control.is-invalid {
   .bs\:mx-auto {
     margin-left: auto;
     margin-right: auto;
+  }
+
+  .bs\:-mt-80 {
+    margin-top: -20rem;
   }
 
   .bs\:mb-0\.5 {
@@ -4621,6 +4612,11 @@ textarea.form-control.is-invalid {
     max-width: -webkit-fit-content;
     max-width: -moz-fit-content;
     max-width: fit-content;
+  }
+
+  .bs\:py-2 {
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
   }
 
   .bs\:px-4 {
@@ -4838,11 +4834,6 @@ textarea.form-control.is-invalid {
 }
 
 @media (min-width: 768px) {
-  .md\:my-0 {
-    margin-top: 0px;
-    margin-bottom: 0px;
-  }
-
   .md\:my-32 {
     margin-top: 8rem;
     margin-bottom: 8rem;
@@ -4851,6 +4842,10 @@ textarea.form-control.is-invalid {
   .md\:my-14 {
     margin-top: 3.5rem;
     margin-bottom: 3.5rem;
+  }
+
+  .md\:mt-0 {
+    margin-top: 0px;
   }
 
   .md\:mb-3 {
@@ -4871,6 +4866,11 @@ textarea.form-control.is-invalid {
 
   .md\:w-auto {
     width: auto;
+  }
+
+  .md\:py-0 {
+    padding-top: 0px;
+    padding-bottom: 0px;
   }
 
   .md\:px-9 {
@@ -4916,19 +4916,5 @@ textarea.form-control.is-invalid {
   .lg\:text-3xl {
     font-size: 1.875rem;
     line-height: 2.25rem;
-  }
-}
-
-@media (min-width: 1280px) {
-  .xl\:my-20 {
-    margin-top: 5rem;
-    margin-bottom: 5rem;
-  }
-}
-
-@media (min-width: 1536px) {
-  .\32xl\:my-24 {
-    margin-top: 6rem;
-    margin-bottom: 6rem;
   }
 }
