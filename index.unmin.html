@@ -1,0 +1,707 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <title>Bubble Blaster Battles</title>
+        <meta
+            name="description"
+            content="The official website for Bubble Blaster Battles, a game where you dive into the endless Ocean and build your own bubble tank to fight hundreds of enemies and explore expansive biomes!"
+        />
+        <meta
+            name="keywords"
+            content="bubble, blaster, battles, bubble blaster, blaster battles, bubble blaster battles, bubble battles, ocean, explore, exploration, game, bubble game, bubble tanks, bubble tanks game, ocean game, ocean bubble game"
+        />
+        <meta name="author" content="Tooni" />
+
+        <!-- Website Favicon -->
+        <link rel="icon" href="./images/BBBLogo.png" async />
+
+        <!-- Tailwind CSS Stylesheets -->
+        <link rel="stylesheet" href="./css/styles.css" async />
+
+        <!-- Tailwind Elements Package -->
+        <script src="./packages/index.min.js" async></script>
+
+        <!-- Bubbly Background Package -->
+        <script src="./packages/bubbly-bg.js"></script>
+
+        <!-- Gather Jua Font -->
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Jua&display=swap"
+            rel="stylesheet"
+        />
+
+        <style>
+            /* Apply Jua Font */
+            html {
+                font-family: "Jua", sans-serif;
+            }
+
+            /* Prevent Webpage Scroll-Pushing On Reload */
+            body {
+                overflow-anchor: none;
+            }
+
+            /* Header and Nav Content Slide-Out Animations */
+            #header {
+                transition: all 0.15s;
+            }
+            #header.hide {
+                top: -80px;
+            }
+            #navContent {
+                transition: all 0.3s;
+            }
+            #navContent.show {
+                margin-top: 0px;
+            }
+
+            .text-outline {
+                -webkit-text-stroke: 6px;
+                -webkit-text-fill-color: #1c1c1c;
+            }
+            .text-shadow {
+                text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.9);
+            }
+        </style>
+    </head>
+
+    <body class="bg-blue-600 flex flex-col overflow-x-clip">
+        <!-- Nav -->
+        <nav
+            id="header"
+            class="w-full fixed top-0 z-30 shade bg-gradient-to-r from-blue-800 to-blue-500"
+        >
+            <div
+                class="mx-auto px-2 my-3 flex flex-wrap items-center justify-between"
+            >
+                <!-- Top Left Logo -->
+                <div class="pl-3">
+                    <a
+                        href="https://store.steampowered.com/app/2073340/Bubble_Blaster_Battles/"
+                        target="_blank"
+                    >
+                        <img
+                            class="w-14 h-14 shade hover:scale-110 hover:-rotate-12 transition ease-in-out"
+                            src="./images/BBBLogo.png"
+                        />
+                    </a>
+                </div>
+
+                <!-- Narrow Screen Nav Toggle -->
+                <div class="bs:block md:hidden pr-3">
+                    <button
+                        id="navToggle"
+                        data-mdb-ripple="true"
+                        data-mdb-ripple-color="dark"
+                        class="button px-5 py-3"
+                    >
+                        <svg
+                            class="w-4 h-4"
+                            viewBox="0 0 20 20"
+                            xmlns="http://www.w3.org/2000/svg"
+                        >
+                            <path
+                                d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z"
+                            />
+                        </svg>
+                    </button>
+                </div>
+
+                <!-- Nav Content -->
+                <div
+                    id="navContent"
+                    class="bs:w-full md:w-auto bs:-mt-80 md:mt-0 bs:py-2 md:py-0 text-lg"
+                >
+                    <ul class="md:flex justify-end items-center">
+                        <li class="nav-item">
+                            <button
+                                id="game"
+                                data-mdb-ripple="true"
+                                data-mdb-ripple-color="dark"
+                                class="button nav-button"
+                            >
+                                Game
+                            </button>
+                        </li>
+                        <li class="nav-item">
+                            <button
+                                id="download"
+                                data-mdb-ripple="true"
+                                data-mdb-ripple-color="dark"
+                                class="button nav-button"
+                            >
+                                Download
+                            </button>
+                        </li>
+                        <li class="nav-item">
+                            <button
+                                id="community"
+                                data-mdb-ripple="true"
+                                data-mdb-ripple-color="dark"
+                                class="button nav-button"
+                            >
+                                Community
+                            </button>
+                        </li>
+                        <li class="nav-item">
+                            <button
+                                id="supportProject"
+                                data-mdb-ripple="true"
+                                data-mdb-ripple-color="dark"
+                                class="button nav-button"
+                            >
+                                Support Project
+                            </button>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <div class="max-w-none h-auto mt-20">
+            <!-- Game Trailer -->
+            <video
+                width="100%"
+                alt="Bubble Blaster Battles Trailer"
+                poster="./images/BBBImage2.png"
+                autoplay
+                muted
+                loop
+                playsinline
+            >
+                <source src="./videos/BBBTrailer.mp4" type="video/mp4" />
+                <source src="./videos/BBBTrailer.webm" type="video/webm" />
+                Your browser does not support the video tag :(
+            </video>
+
+            <!-- Game -->
+            <div
+                class="bs:px-4 xs:px-5 sm:px-7 md:px-9 bs:my-12 xxs:my-16 xs:my-20 sm:my-28 md:my-32 lg:my-36 text-center"
+            >
+                <h1
+                    id="BBBTitleText"
+                    class="bs:mb-0.5 xs:mb-1 sm:mb-2 md:mb-3 lg:mb-4 flex-inline bs:text-xl xxs:text-2xl xs:text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black gradient-text from-yellow-400 to-orange-500 tracking-widest text-outline shade"
+                >
+                    Bubble Blaster Battles
+                </h1>
+                <p
+                    class="inline bs:text-base xxs:text-lg xs:text-xl md:text-2xl lg:text-3xl text-gray-200 tracking-wide text-shadow shade"
+                >
+                    Dive into the endless Ocean and build your own bubble tank
+                    to fight hundreds of enemies and explore expansive biomes!
+                </p>
+                <div
+                    class="bs:my-5 xxs:my-6 xs:my-8 sm:my-11 md:my-14 lg:my-16"
+                >
+                    <img
+                        id="bubbleTankBattle"
+                        src="./images/BubbleTankBattle.png"
+                        loading="lazy"
+                        alt="Bubble Tank Battle"
+                        class="mx-auto z-10"
+                    />
+                </div>
+                <p
+                    class="inline bs:text-base xxs:text-lg xs:text-xl md:text-2xl lg:text-3xl text-gray-200 tracking-wide text-shadow shade"
+                >
+                    Design your bubble tank to fit your playstyle and pilot it
+                    to slay bosses and hordes, unlock more weapons to expand
+                    your arsenal, and traverse the infinitely generated Ocean to
+                    discover its treasures.
+                </p>
+            </div>
+
+            <div
+                id="showcaseCarousel"
+                class="carousel slide relative"
+                data-bs-ride="carousel"
+                data-bs-interval="4500"
+                data-bs-pause="false"
+            >
+                <div
+                    class="carousel-indicators absolute right-0 bottom-0 left-0 flex justify-center mb-2 p-0"
+                >
+                    <button
+                        type="button"
+                        data-bs-target="#showcaseCarousel"
+                        data-bs-slide-to="0"
+                        class="active"
+                        aria-current="true"
+                        aria-label="Slide 1"
+                    ></button>
+                    <button
+                        type="button"
+                        data-bs-target="#showcaseCarousel"
+                        data-bs-slide-to="1"
+                        aria-label="Slide 2"
+                    ></button>
+                    <button
+                        type="button"
+                        data-bs-target="#showcaseCarousel"
+                        data-bs-slide-to="2"
+                        aria-label="Slide 3"
+                    ></button
+                    ><button
+                        type="button"
+                        data-bs-target="#showcaseCarousel"
+                        data-bs-slide-to="3"
+                        aria-label="Slide 4"
+                    ></button>
+                </div>
+                <div class="carousel-inner w-full relative overflow-hidden">
+                    <div
+                        class="carousel-item active w-full relative float-left"
+                    >
+                        <img
+                            src="./images/BBBImage1.png"
+                            loading="lazy"
+                            class="w-full block"
+                            alt="Bubble Tank In Editor"
+                        />
+                    </div>
+                    <div class="carousel-item w-full relative float-left">
+                        <img
+                            src="./images/BBBImage2.png"
+                            loading="lazy"
+                            class="w-full block"
+                            alt="Different Weapons In The Tank Editor"
+                        />
+                    </div>
+                    <div class="carousel-item w-full relative float-left">
+                        <img
+                            src="./images/BBBImage3.png"
+                            loading="lazy"
+                            class="w-full block"
+                            alt="Bubble Tank From Editor Into The Ocean"
+                        />
+                    </div>
+                    <div class="carousel-item w-full relative float-left">
+                        <img
+                            src="./images/BBBImage4.png"
+                            loading="lazy"
+                            class="w-full block"
+                            alt="Bubble Tank Fight In The Ocean"
+                        />
+                    </div>
+                </div>
+                <button
+                    class="carousel-control-prev absolute top-0 bottom-0 left-0 p-0 flex items-center justify-center text-center border-0 hover:outline-none hover:no-underline focus:outline-none focus:no-underline"
+                    type="button"
+                    data-bs-target="#showcaseCarousel"
+                    data-bs-slide="prev"
+                >
+                    <span
+                        class="carousel-control-prev-icon inline-block bg-no-repeat"
+                        aria-hidden="true"
+                    ></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button
+                    class="carousel-control-next absolute top-0 bottom-0 right-0 p-0 flex items-center justify-center text-center border-0 hover:outline-none hover:no-underline focus:outline-none focus:no-underline"
+                    type="button"
+                    data-bs-target="#showcaseCarousel"
+                    data-bs-slide="next"
+                >
+                    <span
+                        class="carousel-control-next-icon inline-block bg-no-repeat"
+                        aria-hidden="true"
+                    ></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+
+            <div class="bs:px-4 xs:px-5 sm:px-7 md:px-9 text-center">
+                <!-- Download -->
+                <div
+                    id="steam"
+                    class="max-w-2xl mx-auto bs:my-12 xxs:my-16 xs:my-20 sm:my-28 md:my-32 lg:my-36"
+                >
+                    <p
+                        class="bs:h-fit xxs:h-12 xs:h-14 sm:h-16 md:h-20 p-2 inline-block bs:text-xl xxs:text-2xl xs:text-3xl sm:text-4xl md:text-5xl font-extrabold gradient-text from-teal-100 to-teal-400 tracking-wide text-outline shade"
+                    >
+                        Start your adventure!
+                    </p>
+                    <a
+                        href="https://store.steampowered.com/app/2073340/Bubble_Blaster_Battles/"
+                        target="_blank"
+                        class="max-w-fit bs:pl-5 xs:pl-2 flex flex-auto button items-center ring"
+                        data-mdb-ripple="true"
+                        data-mdb-ripple-color="dark"
+                    >
+                        <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 64 64"
+                            xmlns:xlink="http://www.w3.org/1999/xlink"
+                            class="w-24 h-24 py-3"
+                        >
+                            <path
+                                data-name="layer1"
+                                d="M31.945 0A32.028 32.028 0 0 0 0 29.433l17.181 7.091a9.021 9.021 0 0 1 5.106-1.574q.256 0 .505.014l7.642-11.057v-.155a12.088 12.088 0 1 1 12.088 12.07h-.275l-10.9 7.76c.007.144.012.288.012.429a9.075 9.075 0 0 1-17.97 1.786L1.1 40.72A32.047 32.047 0 1 0 31.945 0z"
+                                fill="#202020"
+                            ></path>
+                            <path
+                                data-name="layer1"
+                                d="M20.088 48.555l-3.937-1.625a6.8 6.8 0 1 0 3.725-9.293l4.069 1.679a5.005 5.005 0 1 1-3.857 9.238zm30.489-24.803a8.055 8.055 0 1 0-8.054 8.04 8.059 8.059 0 0 0 8.054-8.04zm-14.093-.013a6.051 6.051 0 1 1 6.05 6.039 6.045 6.045 0 0 1-6.049-6.04z"
+                                fill="#202020"
+                            ></path>
+                        </svg>
+                        <p
+                            class="bs:max-w-fit xs:max-w-none bs:pl-3 xs:pl-1 pr-5 inline bs:text-2xl xs:text-3xl"
+                        >
+                            Get it on Steam
+                        </p>
+                    </a>
+                </div>
+
+                <!-- Community -->
+                <div
+                    id="discord"
+                    class="max-w-2xl mx-auto bs:my-12 xxs:my-16 xs:my-20 sm:my-28 md:my-32 lg:my-36"
+                >
+                    <p
+                        class="bs:h-fit xxs:h-12 xs:h-14 sm:h-16 md:h-20 p-2 inline-block bs:text-xl xxs:text-2xl xs:text-3xl sm:text-4xl md:text-5xl font-extrabold gradient-text from-teal-100 to-teal-400 tracking-wide text-outline shade"
+                    >
+                        Chat with the community
+                    </p>
+                    <a
+                        href="https://discord.gg/5V88S5e5wC"
+                        target="_blank"
+                        class="max-w-fit bs:pl-5 xs:pl-4 flex flex-auto button items-center ring"
+                        data-mdb-ripple="true"
+                        data-mdb-ripple-color="dark"
+                    >
+                        <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 640 512"
+                            style="color: #202020"
+                            class="w-24 h-24 py-2"
+                        >
+                            <!--! Font Awesome Pro 6.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. -->
+                            <path
+                                fill="currentColor"
+                                d="M524.531,69.836a1.5,1.5,0,0,0-.764-.7A485.065,485.065,0,0,0,404.081,32.03a1.816,1.816,0,0,0-1.923.91,337.461,337.461,0,0,0-14.9,30.6,447.848,447.848,0,0,0-134.426,0,309.541,309.541,0,0,0-15.135-30.6,1.89,1.89,0,0,0-1.924-.91A483.689,483.689,0,0,0,116.085,69.137a1.712,1.712,0,0,0-.788.676C39.068,183.651,18.186,294.69,28.43,404.354a2.016,2.016,0,0,0,.765,1.375A487.666,487.666,0,0,0,176.02,479.918a1.9,1.9,0,0,0,2.063-.676A348.2,348.2,0,0,0,208.12,430.4a1.86,1.86,0,0,0-1.019-2.588,321.173,321.173,0,0,1-45.868-21.853,1.885,1.885,0,0,1-.185-3.126c3.082-2.309,6.166-4.711,9.109-7.137a1.819,1.819,0,0,1,1.9-.256c96.229,43.917,200.41,43.917,295.5,0a1.812,1.812,0,0,1,1.924.233c2.944,2.426,6.027,4.851,9.132,7.16a1.884,1.884,0,0,1-.162,3.126,301.407,301.407,0,0,1-45.89,21.83,1.875,1.875,0,0,0-1,2.611,391.055,391.055,0,0,0,30.014,48.815,1.864,1.864,0,0,0,2.063.7A486.048,486.048,0,0,0,610.7,405.729a1.882,1.882,0,0,0,.765-1.352C623.729,277.594,590.933,167.465,524.531,69.836ZM222.491,337.58c-28.972,0-52.844-26.587-52.844-59.239S193.056,219.1,222.491,219.1c29.665,0,53.306,26.82,52.843,59.239C275.334,310.993,251.924,337.58,222.491,337.58Zm195.38,0c-28.971,0-52.843-26.587-52.843-59.239S388.437,219.1,417.871,219.1c29.667,0,53.307,26.82,52.844,59.239C470.715,310.993,447.538,337.58,417.871,337.58Z"
+                            />
+                        </svg>
+                        <p
+                            class="bs:max-w-fit xs:max-w-none bs:pl-1 xs:pl-3 bs:pr-4 xs:pr-6 inline bs:text-2xl xs:text-3xl"
+                        >
+                            Join the Discord
+                        </p>
+                    </a>
+                </div>
+
+                <!-- Support Project -->
+                <div
+                    id="patreon"
+                    class="max-w-2xl mx-auto bs:my-12 xxs:my-16 xs:my-20 sm:my-28 md:my-32 lg:my-36"
+                >
+                    <p
+                        class="bs:h-fit xxs:h-12 xs:h-14 sm:h-16 md:h-20 p-2 inline-block bs:text-xl xxs:text-2xl xs:text-3xl sm:text-4xl md:text-5xl font-extrabold gradient-text from-teal-100 to-teal-400 tracking-wide text-outline shade"
+                    >
+                        Support my mission
+                    </p>
+                    <a
+                        href="https://www.patreon.com/bubbleblasterbattles"
+                        target="_blank"
+                        class="max-w-fit bs:pl-5 xs:pl-2.5 flex flex-auto button items-center ring"
+                        data-mdb-ripple="true"
+                        data-mdb-ripple-color="dark"
+                    >
+                        <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            xmlns:xlink="http://www.w3.org/1999/xlink"
+                            viewBox="0 0 567.2 545.8"
+                            class="w-24 h-24 py-3"
+                        >
+                            <g>
+                                <circle
+                                    fill="#202020"
+                                    cx="362.6"
+                                    cy="204.6"
+                                    r="204.6"
+                                />
+                                <rect
+                                    fill="#202020"
+                                    width="100"
+                                    height="545.8"
+                                />
+                            </g>
+                        </svg>
+                        <p
+                            class="bs:max-w-fit xs:max-w-none bs:pl-3 xs:pl-1 pr-5 inline bs:text-2xl xs:text-3xl"
+                        >
+                            Support on Patreon
+                        </p>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!--Footer-->
+        <footer class="w-full mt-16 bg-blue-900">
+            <div
+                class="w-fit mx-auto mt-5 mb-7 flex flex-col sm:flex-row text-gray-200 text-shadow"
+            >
+                <div class="bs:mx-auto sm:ml-auto bs:mb-7 sm:mb-0 px-10">
+                    <div class="w-fit ml-auto">
+                        <img
+                            src="./images/MoonfriesLogoNoText.png"
+                            loading="lazy"
+                            alt="Moonfries Logo"
+                            class="shade hover:-rotate-45 transition ease-in-out duration-700"
+                        />
+                        <p class="inline">Made by Moonfries</p>
+                    </div>
+                </div>
+
+                <div
+                    class="m-auto bs:px-2 xxs:px-6 xs:px-10 bs:text-center sm:text-left"
+                >
+                    <p class="inline">
+                        Need support or have a business inquiry?
+                    </p>
+                    <p class="bs:block lg:inline">Feel free to contact us!</p>
+
+                    <div class="w-fit bs:mx-auto sm:mx-0">
+                        <a
+                            href="mailto:contact@bubbleblasterbattles.com"
+                            target="_blank"
+                        >
+                            <p class="relative group mt-2">
+                                <span
+                                    class="bs:text-base xxs:text-lg xs:text-2xl sm:text-xl md:text-2xl group-hover:text-sky-300 group-hover:duration-300"
+                                    >contact@bubbleblasterbattles.com
+                                </span>
+                                <span
+                                    class="underline-animation underline-animation-left"
+                                ></span>
+                                <span
+                                    class="underline-animation underline-animation-right"
+                                ></span>
+                            </p>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <p
+                class="bs:-mt-3 sm:-mt-7 pr-1 bs:text-center sm:text-right text-xs text-blue-700"
+            >
+                © 2022 Moonfries. All rights reserved.
+            </p>
+        </footer>
+
+        <!-- GreenSock Animation Package -->
+        <script src="./packages/gsap.min.js"></script>
+
+        <script>
+            /* Build Bubbly Background */
+            bubbly({ colorStart: "#0094FF", colorStop: "#5532e3" });
+
+            /* Toggle Header Visibility */
+            const header = document.getElementById("header");
+            var buttonScrollActive = false;
+            var scrollTimeout;
+            var lastScrollTop =
+                window.pageYOffset || document.documentElement.scrollTop;
+
+            window.addEventListener(
+                "scroll",
+                function () {
+                    //if buttonScrollActive is true, reset scroll timer and stop function
+                    if (buttonScrollActive) {
+                        clearTimeout(scrollTimeout);
+                        scrollTimeout = setTimeout(function () {
+                            buttonScrollActive = false;
+                        }, 250);
+                        return;
+                    }
+
+                    //gather the scrolltop value and compare it to the previous scrolltop
+                    let scrollTop =
+                        window.pageYOffset ||
+                        document.documentElement.scrollTop;
+                    if (scrollTop > lastScrollTop) {
+                        //scrolling down - hide the header and menu
+                        header.classList.add("hide");
+                        if (navMenuDiv.classList.contains("show")) {
+                            navMenuDiv.classList.remove("show");
+                        }
+                    } else {
+                        //scrolling up - show the header
+                        header.classList.remove("hide");
+                    }
+                    //store scroll value for later - negative scroll (possible on mobile) flattened to 0
+                    lastScrollTop = scrollTop <= 0 ? 0 : scrollTop;
+                },
+                false
+            );
+
+            /* Toggle Dropdown List */
+            const navMenuDiv = document.getElementById("navContent");
+            const navToggle = document.getElementById("navToggle");
+
+            document.onclick = CheckClick;
+            function CheckClick(e) {
+                let target = (e && e.target) || (event && event.srcElement);
+
+                if (!CheckParent(target, navMenuDiv)) {
+                    //we have NOT clicked on the menu content
+                    if (CheckParent(target, navToggle)) {
+                        //we have clicked on the menu toggle - toggle menu
+                        if (!navMenuDiv.classList.contains("show")) {
+                            navMenuDiv.classList.add("show");
+                        } else {
+                            navMenuDiv.classList.remove("show");
+                        }
+                    } else {
+                        //we have clicked outside the menu and not on a link - hide menu
+                        navMenuDiv.classList.remove("show");
+                    }
+                }
+            }
+            function CheckParent(t, elm) {
+                while (t.parentNode) {
+                    if (t == elm) {
+                        return true;
+                    }
+                    t = t.parentNode;
+                }
+                return false;
+            }
+
+            /* Dropdown Menu Button Functions */
+            document.getElementById("game").addEventListener(
+                "click",
+                function () {
+                    ScrollTo(0);
+                },
+                false
+            );
+            document.getElementById("download").addEventListener(
+                "click",
+                function () {
+                    ScrollTo(1);
+                },
+                false
+            );
+            document.getElementById("community").addEventListener(
+                "click",
+                function () {
+                    ScrollTo(2);
+                },
+                false
+            );
+            document.getElementById("supportProject").addEventListener(
+                "click",
+                function () {
+                    ScrollTo(3);
+                },
+                false
+            );
+
+            function ScrollTo(x) {
+                //scroll to the section determined by x
+                switch (x) {
+                    case 0:
+                        document.getElementById("BBBTitleText").scrollIntoView({
+                            behavior: "smooth",
+                            block: "start",
+                        });
+                        break;
+                    case 1:
+                        document.getElementById("steam").scrollIntoView({
+                            behavior: "smooth",
+                            block: "center",
+                        });
+                        break;
+                    case 2:
+                        document.getElementById("discord").scrollIntoView({
+                            behavior: "smooth",
+                            block: "center",
+                        });
+                        break;
+                    case 3:
+                        document.getElementById("patreon").scrollIntoView({
+                            behavior: "smooth",
+                            block: "center",
+                        });
+                        break;
+                }
+                //set buttonScrollActive to true so that the auto scroll
+                //won't be detected in the scroll event listener
+                buttonScrollActive = true;
+
+                //hide the header and menu
+                header.classList.add("hide");
+                if (navMenuDiv.classList.contains("show")) {
+                    navMenuDiv.classList.remove("show");
+                }
+            }
+
+            /* Bubble Tank Battle Floating Animation */
+            const bubbleTanks = document.getElementById("bubbleTankBattle");
+
+            //calculate a scale factor for the animation based on the viewport width
+            var widthScaler = window.innerWidth * 0.002;
+            window.addEventListener(
+                "resize",
+                function () {
+                    widthScaler = window.innerWidth * 0.002;
+                },
+                false
+            );
+
+            const randomX = random(1, 5);
+            const randomY = random(1, 5);
+            const randomTime = random(4, 7);
+            const randomTime2 = random(7, 12);
+            const randomAngle = random(-10, 10);
+
+            function random(min, max) {
+                const delta = max - min;
+                return (direction = 1) =>
+                    (min + delta * Math.random()) * direction;
+            }
+
+            //initialize floating animation
+            gsap.set(bubbleTanks, {
+                x: randomX(-1),
+                y: randomX(1),
+                rotation: randomAngle(-1),
+            });
+            moveX(bubbleTanks, 1);
+            moveY(bubbleTanks, -1);
+            rotate(bubbleTanks, 1);
+
+            function moveX(target, direction) {
+                gsap.to(target, randomTime(), {
+                    x: randomX(direction) * widthScaler,
+                    ease: Sine.easeInOut,
+                    onComplete: moveX,
+                    onCompleteParams: [target, direction * -1],
+                });
+            }
+            function moveY(target, direction) {
+                gsap.to(target, randomTime(), {
+                    y: randomY(direction) * widthScaler,
+                    ease: Sine.easeInOut,
+                    onComplete: moveY,
+                    onCompleteParams: [target, direction * -1],
+                });
+            }
+            function rotate(target, direction) {
+                gsap.to(target, randomTime2(), {
+                    rotation: randomAngle(direction),
+                    ease: Sine.easeInOut,
+                    onComplete: rotate,
+                    onCompleteParams: [target, direction * -1],
+                });
+            }
+        </script>
+    </body>
+</html>

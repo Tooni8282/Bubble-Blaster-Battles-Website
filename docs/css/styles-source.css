@@ -7,7 +7,7 @@
         @apply w-fit bs:mx-auto md:mx-0 bs:my-2.5 md:my-0 md:mr-4;
     }
     .nav-button {
-        @apply px-4 bs:py-1 md:py-1.5;
+        @apply w-auto px-4 bs:py-1 md:py-1.5;
     }
     .button {
         @apply mx-auto text-center text-gray-900 font-extrabold cursor-pointer rounded-lg
