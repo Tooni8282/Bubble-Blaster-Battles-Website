@@ -4919,3 +4919,10 @@ textarea.form-control.is-invalid {
     line-height: 2.25rem;
   }
 }
+
+@media (min-width: 1280px) {
+  .xl\:px-11 {
+    padding-left: 2.75rem;
+    padding-right: 2.75rem;
+  }
+}
