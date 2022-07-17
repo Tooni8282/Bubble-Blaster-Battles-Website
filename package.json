@@ -3,7 +3,6 @@
     "version": "1.0.0",
     "description": "The home of the Bubble Blaster Battles Website build-grounds.",
     "main": "index.js",
-    "directories": {},
     "scripts": {
         "build-styles-css": "npx tailwindcss -i ./docs/css/styles-source.css -o ./docs/css/styles.css --watch",
         "minify-styles-css": "npx tailwindcss -o ./docs/css/styles.css --minify"
@@ -12,8 +11,11 @@
         "type": "git",
         "url": "git+https://github.com/Tooni8282/Bubble-Blaster-Battles-Website.git"
     },
-    "keywords": [],
-    "author": "",
+    "author": {
+        "name": "Tooni",
+        "email": "contact@bubbleblasterbattles.com",
+        "url": "http://bubbleblasterbattles.com/"
+    },
     "license": "ISC",
     "bugs": {
         "url": "https://github.com/Tooni8282/Bubble-Blaster-Battles-Website/issues"
@@ -25,7 +27,7 @@
         "bubbly-bg": "^1.0.0",
         "gsap": "^3.10.4",
         "postcss": "^8.4.14",
-        "tailwindcss": "^3.1.4",
+        "tailwindcss": "^3.1.6",
         "tw-elements": "^1.0.0-alpha12"
     }
 }
